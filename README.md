@@ -27,16 +27,16 @@ Flags:
 
 ## Common issues
 
-* During test/runtime:`RuntimeException: Implement me`
+* During test/runtime:`RuntimeException: Implement me`  
       Student didn't remove the `throw new RuntimeException("Implement me");` statement
-* mvnw:`Error: JAVA_HOME is not defined correctly; We cannot execute ….`
-      The `export JAVA_HOME=…` step is only meant for lab machines ONLY; students don't usually read
+* mvnw:`Error: JAVA_HOME is not defined correctly; We cannot execute ….`  
+      The `export JAVA_HOME=…` step is only meant for lab machines ONLY; students don't usually read  
       Run: `unset JAVA_HOME` to undo this
-* ./mvnw:`/bin/bash^M: bad interpreter…`
+* ./mvnw:`/bin/bash^M: bad interpreter…`  
       The `mvnw` executable is broken; if on Linux, do `sed -i -e 's/\r$//' mvnw`; OSX users can try `dos2unix`
-* mvnw:`The goal you specified requires a project to execute but there is no POM in this directory`
+* mvnw:`The goal you specified requires a project to execute but there is no POM in this directory`  
       The `mvnw`  command should be executed from the project root(where `pom.xml` resides)
-* javac:`cannot find symbol...` 
+* javac:`cannot find symbol...`  
       Compilation error, probably syntax related
 
 
