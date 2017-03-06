@@ -36,6 +36,8 @@ Flags:
       The `mvnw` executable is broken; if on Linux, do `sed -i -e 's/\r$//' mvnw`; OSX users can try `dos2unix`
 * mvnw:`The goal you specified requires a project to execute but there is no POM in this directory`  
       The `mvnw`  command should be executed from the project root(where `pom.xml` resides)
+* Cannot find symbol `Objects`  
+      If using `import static ...Objects.requireNotNull`, then use the unqualified method name, `requireNotNull`. If using `import ...Objects`, then call `Objects.requireNotNull`
 * javac:`cannot find symbol...`  
       Compilation error, probably syntax related
 
