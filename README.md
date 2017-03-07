@@ -1,6 +1,13 @@
 Panda2 quick reference
 ===================================
 
+A set of documents have been prepared for teaching:
+
+ * [Setup](SETUP.md) - setup instruction for lab machines
+ * [Resources](RESOURCES.md) - resources student can use for their project
+ * [Java](JAVA.md) - quick reminder of Java features
+ * [Objectives](OBJECTIVES.md) - learning objectives in the CW-MODEL and CW-AI project
+
 ## Maven cheat sheet
 
 Tasks:
