@@ -7,6 +7,8 @@ your machine needs to have Java 8u102 or newer installed.
 
 #CentOS 7
 
+- Before you start, are you getting `javafx` errors? Make sure they run the export JAVA_HOME command at the top of the webpage!
+
 CentOS' yum repository seems to only contain old versions of JDK and 
 due to licensing issues, JavaFX jars are excluded intentionally.
 
