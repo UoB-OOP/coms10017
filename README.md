@@ -46,7 +46,7 @@ Flags:
 * Cannot find symbol `Objects`  
       If using `import static ...Objects.requireNotNull`, then use the unqualified method name, `requireNotNull`. If using `import ...Objects`, then call `Objects.requireNotNull`
 * javac:`cannot find symbol...`  
-      Compilation error, probably syntax related
+      Compilation error, probably syntax related. Or possibly they haven't set the `JAVA_HOME` variable
 
 
 ## Language questions
