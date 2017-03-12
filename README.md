@@ -8,30 +8,6 @@ A set of documents have been prepared for teaching:
  * [Java](JAVA.md) - quick reminder of Java features
  * [Objectives](OBJECTIVES.md) - learning objectives in the CW-MODEL and CW-AI project
 
-## Maven cheat sheet
-
-Tasks:
-
- - Clean - delete binaries
- - Compile - compiles the entire project
- - Test - run all unit tests (compiles project if not already compiled)
-
-Frequently used commands:
-
- - Clean - `mvnw clean`
- - Compile - `mvnw clean compile`
- - Test - `mvnw clean test`
- - Run single test class -  `mvnw test -Dtest=<class>`
- - Run single test -  `mvnw test -Dtest=<class>#<method>*`
- - Start program - `mvnw clean compile exec:java`
-
-Flags:
-
- - `-q` - quiet output
- - `-e` - show detailed stacktrace for maven internals
- - `-i` - verbose output
- - `-DskipTests` - skip unit tests
-
 ## Common issues
 
 * During test/runtime:`RuntimeException: Implement me`  
@@ -49,6 +25,17 @@ Flags:
       Compilation error, probably syntax related. Or possibly they haven't set the `JAVA_HOME` variable, see the next entry for more details
 * javac:`cannot find symbol...javafx.scene....`     
       JavaFX is not correctly installed on the machine, consult [Setup](SETUP.md); for lab machines simply: `export JAVA_HOME="/usr/java/jdk1.8.0_111"`, add this to `.bashrc` or type it **everytime** after login 
+
+## Testing related issues
+
+Q: Where is the stacktrace!?  
+A1: Most tests will output some sort of stacktrace, adding the `-e` flag only prints stacktrace for maven internals, not the actual test   
+A2: For tests that are expecting exceptions(`@Test(expected=SomeException.class)`), the actual stacktrace will be swallowed. To prevent this, manually wrap the code under test in a `try-catch` block with `e.printStackTrace();` where `e` is the exception. It is unfortunate that JUnit defaults to this behavior; this will be rectified for `Panda2-next`.  
+A3: For the love of Alan Turing, use an IDE!!
+
+Q: Test looks wrong  
+A: Please check [Issue Reslution](https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10001_2016/students/issues.html)
+
 
 ## Language questions
 
@@ -96,3 +83,27 @@ A: No
 
 Q: Can I modify the directory structure?  
 A: No
+
+## Maven cheat sheet
+
+Tasks:
+
+ - Clean - delete binaries
+ - Compile - compiles the entire project
+ - Test - run all unit tests (compiles project if not already compiled)
+
+Frequently used commands:
+
+ - Clean - `mvnw clean`
+ - Compile - `mvnw clean compile`
+ - Test - `mvnw clean test`
+ - Run single test class -  `mvnw test -Dtest=<class>`
+ - Run single test -  `mvnw test -Dtest=<class>#<method>*`
+ - Start program - `mvnw clean compile exec:java`
+
+Flags:
+
+ - `-q` - quiet output
+ - `-e` - show detailed stacktrace for maven internals
+ - `-i` - verbose output
+ - `-DskipTests` - skip unit tests
