@@ -7,7 +7,12 @@ your machine needs to have Java 8u102 or newer installed.
 
 #CentOS 7
 
-- Before you start, are you getting `javafx` errors? Make sure they run the export JAVA_HOME command at the top of the webpage!
+**Note for lab machines in 2.11:**
+
+OracleJDK should already be install at `/usr/java/jdk1.8.0_111`, students MUST set the proper JAVA_HOME via
+`export JAVA_HOME="/usr/java/jdk1.8.0_111"`, they may want to add this to their `.bashrc`.
+
+**For any other CentOS machines:**
 
 CentOS' yum repository seems to only contain old versions of JDK and 
 due to licensing issues, JavaFX jars are excluded intentionally.
