@@ -46,8 +46,9 @@ Flags:
 * Cannot find symbol `Objects`  
       If using `import static ...Objects.requireNotNull`, then use the unqualified method name, `requireNotNull`. If using `import ...Objects`, then call `Objects.requireNotNull`
 * javac:`cannot find symbol...`  
-      Compilation error, probably syntax related. Or possibly they haven't set the `JAVA_HOME` variable
-
+      Compilation error, probably syntax related. Or possibly they haven't set the `JAVA_HOME` variable, see the next entry for more details
+* javac:`cannot find symbol...javafx.scene....`     
+      JavaFX is not correctly installed on the machine, consult [Setup](SETUP.md); for lab machines simply: `export JAVA_HOME="/usr/java/jdk1.8.0_111"`, add this to `.bashrc` or type it **everytime** after login 
 
 ## Language questions
 
