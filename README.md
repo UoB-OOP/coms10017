@@ -29,6 +29,8 @@ A set of documents have been prepared for teaching:
 ## Testing related issues
 
 Q: Where is the stacktrace!?  
+
+A1: There was a configuration oversight with `pom.xml` where perfectly good stacktraces would be "trimmed" to a single line pointing to the test's line number. This has been resolved in upstream and Tilo has been notified about this. This should be listed [here](https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10001_2016/students/issues.html)  
 A1: Most tests will output some sort of stacktrace, adding the `-e` flag only prints stacktrace for maven internals, not the actual test   
 A2: For tests that are expecting exceptions(`@Test(expected=SomeException.class)`), the actual stacktrace will be swallowed. To prevent this, manually wrap the code under test in a `try-catch` block with `e.printStackTrace();` where `e` is the exception. It is unfortunate that JUnit defaults to this behavior; this will be rectified for `Panda2-next`.  
 A3: For the love of Alan Turing, use an IDE!!
