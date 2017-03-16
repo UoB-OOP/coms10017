@@ -8,6 +8,16 @@ A set of documents have been prepared for teaching:
  * [Java](JAVA.md) - quick reminder of Java features
  * [Objectives](OBJECTIVES.md) - learning objectives in the CW-MODEL and CW-AI project
 
+## Important notices
+
+ 1. Students are **encouraged** to add `System.out.println()` in their model. Make sure to make it easily spottable, i.e. `">>>>>> roundNum" + round` otherwise it might get lost in maven's long output.  
+ 2. Test `Failure` is not the same as `Error`;  If a test fails due to some unexpected exception then it's an Error that has nothing to do with the test. 
+ 3. Students will **have to** understand the `sample game sequence` for for them to call the correct spectator methods.
+ 4. Students will **have to** read the `model specification` for them to carry out the correct game logic (DoubleMove/reveal rounds, etc)
+
+In any case, It is fine to give up on a student if their question is too specific/complex, the model is very complex and we can't possibly know what they are doing for all cases.
+
+
 ## Common issues
 
 * During test/runtime:`RuntimeException: Implement me`  
