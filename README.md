@@ -35,6 +35,8 @@ In any case, It is fine to give up on a student if their question is too specifi
       Compilation error, probably syntax related. Or possibly they haven't set the `JAVA_HOME` variable, see the next entry for more details
 * javac:`cannot find symbol...javafx.scene....`     
       JavaFX is not correctly installed on the machine, consult [Setup](SETUP.md); for lab machines simply: `export JAVA_HOME="/usr/java/jdk1.8.0_111"`, add this to `.bashrc` or type it **everytime** after login 
+ * mvnw:`java.lang.UnsupportedClassVersionError:... Unsupported major.minor version 5...`  
+      Maven wrapper needs Java 8 to work, check that the correct `JAVA_HOME` is set. If this happens on a Mac, make sure that `JAVA_HOME` is NOT pointing to the system bundled Java 6.  
 
 ## Testing related issues
 
