@@ -40,7 +40,7 @@ JavaFX jar as a separate package.
  2. Install OpenJDK and OpenJFX by typing `sudo apt-get install openjdk-8-jdk libopenjfx-java`
 
 
-# macOS / OS X
+## macOS / OS X
 
 Download the latest JDK from 
 [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
