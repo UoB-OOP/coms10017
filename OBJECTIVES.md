@@ -1,20 +1,20 @@
 Objectives
 ==========
 
-##CW-MODEL & CW-OXO
+## CW-OXO and CW-Model
 
-###Constructor
+### Constructor
 
-The constructor of CW-MODEL teaches the following:
+The constructor of CW-Model teaches the following:
 
-####Using language features to restrict user input
+#### Using language features to restrict user input
 
 The constructor of the skeleton looks like the following:
 
 ```java
-	public ScotlandYardModel(List<Boolean> rounds, Graph<Integer, Transport> graph,
-			PlayerConfiguration mrX, PlayerConfiguration firstDetective,
-			PlayerConfiguration... restOfTheDetectives)
+public ScotlandYardModel(List<Boolean> rounds, Graph<Integer, Transport> graph,
+		PlayerConfiguration mrX, PlayerConfiguration firstDetective,
+		PlayerConfiguration... restOfTheDetectives)
 ```
 
 The intent of splitting the `PlayerConfiguration` argument into 3 is so
@@ -24,32 +24,31 @@ In the example above, we essentially limited the input of
 
 To illustrate, the following input is valid:
 ```java 
-    new ScotlandYardModel(rounds, graph, mrX, blue);
-    new ScotlandYardModel(rounds, graph, mrX, blue, red);
-    new ScotlandYardModel(rounds, graph, mrX, blue, red, green);
+new ScotlandYardModel(rounds, graph, mrX, blue);
+new ScotlandYardModel(rounds, graph, mrX, blue, red);
+new ScotlandYardModel(rounds, graph, mrX, blue, red, green);
 ```
 Where as the following does not compile:
 ```java 
-    new ScotlandYardModel(rounds, graph);
-    new ScotlandYardModel(rounds, graph, blue);
-    new ScotlandYardModel(rounds, graph, mrX);
+new ScotlandYardModel(rounds, graph);
+new ScotlandYardModel(rounds, graph, blue);
+new ScotlandYardModel(rounds, graph, mrX);
 ```
 
 If we were to use `PlayerConfiguration... configs`, then the client 
 could leave the parameter empty and the program would crash at runtime.
 
 
-####Defensive programming
+#### Defensive programming
 
-The constructor of both CW-OXO and CW-MODEL must validate all input
-parameters and throw exceptions
-when they are not valid.
+The constructor of both CW-Model and CW-OXO must validate all input
+parameters and throw exceptions when they are not valid.
 
 Test suite `uk.ac.bris.cs.scotlandyard.model.ModelCreationTest` tests 
 whether the model is defensive in that all parameters are validated. 
 
 
-###Immutable object access
+### Immutable object access
 
 Immutable objects prevent clients of a class from corrupting the state.
 In the model, all methods that return a collection must be an immutable. 
@@ -61,7 +60,7 @@ Test suite `uk.ac.bris.cs.scotlandyard.model.ModelCreationTest` tests
 whether returned collections are immutable.
 
 
-###Fail early
+### Fail early
 
 Methods such as `uk.ac.bris.cs.scotlandyard.model.ScotlandYardModel.registerSpectator`
 would throw exceptions when the given argument breaks the contract. 
@@ -71,49 +70,49 @@ Test suite `uk.ac.bris.cs.scotlandyard.model.ModelSpectatorTest`,
 inputs will an appropriate exception.
 
 
-###Unit testing
+### Unit testing
 
 CW-OXO intentionally left out a few unit tests around the
 `registerSpectator` functionality, those could be uses as
 unit testing practices.
 
-###Functional programming
+### Functional programming
 
-Both CW-MODEL and CW-OXO contains two versions of the reference
+Both CW-OXO and CW-Model contains two versions of the reference
 model implementation. One is the Java 7 model that uses imperative
 programming, the other model uses functional programming
 features introduced in Java 8.
 
-###Patterns
+### Patterns
 
 Several design patterns are used on the mode:
 
-####Observers
+#### Observers
 
 The spectator feature of the model uses the observer pattern
 
-####Visitors
+#### Visitors
 
 `Move` and subcasses such as `TicketMove` have visitors built in. 
 
-####Builder
+#### Builder
 
 `PlayerConfiguration` has a thread safe builder class to build
 instances of `PlayerConfiguration`
 
-####Inversion of control
+#### Inversion of control
 
 Players only need to implement an interface to be injected into the 
 model via the constructor. 
 
 
-##CW-AI
+## CW-AI
  
-###Patterns
+### Patterns
 
 Several design patterns are used on the module:
 
-####Factories
+#### Factories
 
 AIs have to implement the `PlayerFactory` interface.
 
