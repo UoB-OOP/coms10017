@@ -1,11 +1,10 @@
-Development environment setup
-=============================
+# Development environment setup
 
 In order to start working on the  cw-model and cw-ai coursework, 
 your machine needs to have Java 8u102 or newer installed. 
 
 
-#CentOS 7
+## CentOS 7
 
 **Note for lab machines in 2.11:**
 
@@ -32,7 +31,7 @@ the instructions below:
 **NOTE**: If you have multiple versions of Java installed, you may 
 select the default version to use via `alternatives --config java`
 
-#Ubuntu
+## Ubuntu
 
 Ubuntu's apt repository contains an up-to-date OpenJDK with latest 
 JavaFX jar as a separate package.
@@ -41,7 +40,7 @@ JavaFX jar as a separate package.
  2. Install OpenJDK and OpenJFX by typing `sudo apt-get install openjdk-8-jdk libopenjfx-java`
 
 
-#OSX(macOS)
+# macOS / OS X
 
 Download the latest JDK from 
 [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
@@ -73,11 +72,11 @@ C shell:
 Confirm the installation by typing `java -version` and 
     `echo $JAVA_HOME`
 
-#Windows
+## Windows
 
 Download the latest JDK from 
-[Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-, choose the appropriate Windows package and follow the installation 
+[Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html),
+choose the appropriate Windows package and follow the installation 
 instructions.
 
 Add Java to `PATH` and setup `JAVA_HOME` so that other tools such as 
@@ -97,4 +96,3 @@ the console can find where Java is.
   
 **NOTE**: x64 systems must install the `Windows x64` package otherwise 
 JavaFX and other development tools might not work properly.
-
