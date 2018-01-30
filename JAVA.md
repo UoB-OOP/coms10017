@@ -35,7 +35,7 @@ Java
 
 ## Terminology 
 
-###Classpath
+### Classpath
 
 The classpath contains paths to user defined classes. If a project
 has library dependencies, the classpath should contain paths to those
@@ -52,7 +52,7 @@ some class `Animal`
 
 ```java
 
-    class Animal{
+    class Animal {
 	    // some properties
     }
 
@@ -61,7 +61,7 @@ some class `Animal`
 We could create another class that inherits properties of `Animal` :
 
 ```java
-    class Dog extends Animal{
+    class Dog extends Animal {
 	    // some more properties
     }
 ```
@@ -73,8 +73,8 @@ instantiated directly. Below is an example of abstract class by making
 `Animal` abstract and `Dog` a concrete implementation of `Animal`:
 
 ```java
-    abstract class Animal{}
-    class Dog extends Animal{}
+    abstract class Animal {}
+    class Dog extends Animal {}
     
     // to instantiate:
     new Animal(); // error
@@ -111,7 +111,7 @@ Generics are also supported in interfaces and static methods, below is
 an example of generics in static method:
 ```java
     //unchecked
-    static <T> T create(Object object){ return (T) object; } 
+    static <T> T create(Object object) { return (T) object; } 
 ```
 
 #### Type inference
@@ -133,30 +133,30 @@ used with any parameterised type, for example:
 ```
 Type inference also works with static methods:
 ```java
-    List<String> strings = Arrays.asList("foo", "bar);
+    List<String> strings = Arrays.asList("foo", "bar");
 ```
 Which is actually:
 ```java
-    List<String> strings = Arrays.<String>asList("foo", "bar);
+    List<String> strings = Arrays.<String>asList("foo", "bar");
 ```
 This usage is called the type witness. It is only required when the
 compiler does not have sufficient information to deduce the target type.
 
 The compiler might not be able to deduce the target type when:
 
- * Instantiating an anonymous class(no longer the case in Java 9)
+ * Instantiating an anonymous class (no longer the case in Java 9)
  * Method returns a raw type
  
 
 #### Type erasure
 
-Generics in Java is non-reifiable, meaning that generics are removed
+Generics in Java are non-reifiable, meaning that generics are removed
 at compile time.
 
 Due to this limitation, the following code is illegal:
 ```java
-    static <T> T createMyObject(){ return new T(); } // illegal
-    static <T> T[] createMyArray(){ return new T[42]; } // illegal
+    static <T> T createMyObject() { return new T(); } // illegal
+    static <T> T[] createMyArray() { return new T[42]; } // illegal
 ```
 In the above examples, `T` gets erased and effectively becomes 
 `java.lang.Object`. The type information gets lost so during runtime
@@ -168,8 +168,8 @@ Type erasure also forbids method overloading with generic types in some
 cases:
 
 ```java
-    static void doIt(List<String> args){}
-    static void doIt(List<Integer> args){} // illegal
+    static void doIt(List<String> args) {}
+    static void doIt(List<Integer> args) {} // illegal
 ```
 Both method has the same erasure so overload resolution fails.
 
@@ -206,9 +206,8 @@ both interface `A` and `B`.
 
 For simple inheritance, Java methods has the following properties:
 
- * Paremeters types - covariant
- * Return type - invariant
-
+ * Parameters types - contravariant
+ * Return type - covariant
 
 For generics, the relationship could be illustrated in form of a graph:
 
@@ -263,7 +262,7 @@ length argument with the same type.
 ```java
     void foo(String...strings){ ... }
 ```
-The resulting type of `strings` is simply an array of `String`, or 
+The resulting type of `strings` is simply an array of `String`, 
 `String[]`. Varargs can only be used once and must be the last 
 argument in a method signature. For example:
 ```java
@@ -287,7 +286,6 @@ Other than constructors, Java supports initialisers for instantiation:
 For example
 ```java
     class Foo{
-    
         int foo;
     
         {
@@ -304,18 +302,16 @@ types:
     }};
 ```
 NOTE: the use of double brace initialisation is debatable as the 
-instantiated `ArrayList` is no the `ArrayList` itself but an anonymous 
-class that extends`ArrayList`
+instantiated `ArrayList` is not an `ArrayList` itself, but an anonymous 
+class that extends `ArrayList`
 
 
 #### Static initialisers
 ```java
-
-    class Foo{
-    
+    class Foo {
         static final String constant;
         
-        static{
+        static {
             constant = "bar";
         }
     
@@ -326,18 +322,18 @@ class that extends`ArrayList`
 Java supports inline classes that loosely captures the notion of 
 closures, for example:
 ```java
-    List<String> strings = new ArrayList<>(){};
+    List<String> strings = new ArrayList<>() {};
 ```
 `strings` is now some anonymous class that extends `ArrayList` . The
 class can also capture effectively-final variables if used within a 
 method call, for example
 ```java
     class Main {
-
         interface Action<T> { T doIt(T source); }
-        public static final void main(String[] args){
+	
+        public static final void main(String[] args) {
              final int value = 10;
-             Action<Integer> addValue = new Action<Integer>(){
+             Action<Integer> addValue = new Action<Integer>() {
                  @Override
                  public Integer doIt(Integer source){
                      return source + value;
@@ -356,10 +352,9 @@ may be read at runtime or compile time to generate code.
 
 The simplest form can be seen while overriding methods:
 ```java
-    public class Foo{
-    
+    public class Foo {
         @Override
-        public String toString(){ return "foo"; }
+        public String toString() { return "foo"; }
     
     }
 ```
@@ -396,9 +391,9 @@ introduced to improve readability. Given the anonymous class with its
 definition:
 ```java
     interface Action<T> { T doIt(T source); }
-    Action<Integer> increment = new Action<Integer>(){
+    Action<Integer> increment = new Action<Integer>() {
         @Override
-        public Integer doIt(Integer source){
+        public Integer doIt(Integer source) {
             return source + 1;
         }
     }
@@ -431,7 +426,7 @@ For example:
     
         void doIt();
         
-        default void doItTwice(){
+        default void doItTwice() {
             doIt();
             doIt();
         }
@@ -449,9 +444,9 @@ that would shorten development time. Below is a list of commonly used
 libraries.
 
  * [Guava](https://github.com/google/guava) - common utilities
- * [Junit](http://junit.org/junit4/) - testing framework
+ * [JUnit](http://junit.org/junit4/) - testing framework
  * [Mockito](http://site.mockito.org/)- mocking framework
- * [Apache commons](https://commons.apache.org/) - suite of reusable tasks
+ * [Apache Commons](https://commons.apache.org/) - suite of reusable tasks
  
 
 ### Java 8 Stream 
@@ -466,7 +461,7 @@ For example:
 
     //Java 7:
     List<Integer> result = new ArrayList<>();
-    for(Integer value : ints){
+    for(Integer value : ints) {
     	if(value % 2) result.add(value);
     }
     
@@ -483,8 +478,8 @@ around null values. For example:
 
 ```java
 
-    class Foo{
-	    String bar(){return null;};
+    class Foo {
+	    String bar() { return null;};
     }
     
     Foo badFoo = null;
