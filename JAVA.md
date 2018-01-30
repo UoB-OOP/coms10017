@@ -483,20 +483,18 @@ around null values. For example:
     }
     
     Foo badFoo = null;
-
     // Java 7
     int barLength = 0;
-    if(badFoo != null)
-        String bar = badFoo.bar();
-        if(bar != null){
-        	barLength = bar.length();
-        }
-    )
-    
+    if (badFoo != null) {
+    	String bar = badFoo.bar();
+    	if (bar != null) {
+    		barLength = bar.length();
+    	}
+    }
     // Java 8
     int barLength = Optional.ofNullable(badFoo)
-            .flatMap(Optional::ofNullable)
-            .flatMap(Optional::ofNullable)
-            .map(String::length).orElse(0);
+    		.map(Foo::bar)
+    		.map(String::length)
+    		.orElse(0);
 
 ```
