@@ -8,6 +8,27 @@ A set of documents have been prepared for teaching:
  * [Java](JAVA.md) - quick reminder of Java features
  * [Objectives](OBJECTIVES.md) - learning objectives in the CW-MODEL and CW-AI project
 
+
+## Maven cheat sheet
+
+Frequently used commands:
+
+ - Clean - `mvnw clean` (deletes compiled classes, safe to do anytime)
+ - Compile - `mvnw clean compile`
+ - Test - `mvnw clean test`
+ - Run single test class -  `mvnw test -Dtest=<class>`
+ - Run single test -  `mvnw test -Dtest=<class>#<method>*`
+ - Start program - `mvnw clean compile exec:java`
+
+Flags:
+
+ - `-q` - quiet output
+ - `-e` - show detailed stacktrace for maven internals
+ - `-i` - verbose output
+ - `-Dwerror=true|false` - fail on warning or not
+ - `-DskipTests` - skip unit tests
+
+
 ## Important notices
 
  1. Students are **encouraged** to add `System.out.println()` in their model. Make sure to make it easily spottable, i.e. `">>>>>> roundNum" + round` otherwise it might get lost in maven's long output.  
@@ -15,15 +36,12 @@ A set of documents have been prepared for teaching:
  3. Students will **have to** understand the `sample game sequence` for for them to call the correct spectator methods.
  4. Students will **have to** read the `model specification` for them to carry out the correct game logic (DoubleMove/reveal rounds, etc)
 
-In any case, It is fine to give up on a student if their question is too specific/complex, the model is very complex and we can't possibly know what they are doing for all cases.
-
-
 ## Common issues
 
 * During test/runtime:`RuntimeException: Implement me`  
       Student didn't remove the `throw new RuntimeException("Implement me");` statement
 * mvnw:`Error: JAVA_HOME is not defined correctly; We cannot execute ….`  
-      The `export JAVA_HOME=…` step is only meant for lab machines ONLY; students don't usually read  
+      The `export JAVA_HOME=…` step is only meant for MVB2.11 Linux lab machines ONLY; students don't usually read  
       Run: `unset JAVA_HOME` to undo this
 * ./mvnw:`/bin/bash^M: bad interpreter…`  
       The `mvnw` executable is broken; if on Linux, do `sed -i -e 's/\r$//' mvnw`; OSX users can try `dos2unix`
@@ -34,7 +52,7 @@ In any case, It is fine to give up on a student if their question is too specifi
 * javac:`cannot find symbol...`  
       Compilation error, probably syntax related. Or possibly they haven't set the `JAVA_HOME` variable, see the next entry for more details
 * javac:`cannot find symbol...javafx.scene....`     
-      JavaFX is not correctly installed on the machine, consult [Setup](SETUP.md); for lab machines simply: `export JAVA_HOME="/usr/java/jdk1.8.0_111"`, add this to `.bashrc` or type it **everytime** after login 
+      JavaFX is not correctly installed on the machine, consult [Setup](SETUP.md); for MVB2.11 lab machines simply: `export JAVA_HOME="/usr/java/jdk1.8.0_111"`, add this to `.bashrc` or type it **everytime** after login 
  * mvnw:`java.lang.UnsupportedClassVersionError:... Unsupported major.minor version 5...`  
       Maven wrapper needs Java 8 to work, check that the correct `JAVA_HOME` is set. If this happens on a Mac, make sure that `JAVA_HOME` is NOT pointing to the system bundled Java 6.  
 
@@ -42,14 +60,8 @@ In any case, It is fine to give up on a student if their question is too specifi
 
 Q: Where is the stacktrace!?  
 
-A1: There was a configuration oversight with `pom.xml` where perfectly good stacktraces would be "trimmed" to a single line pointing to the test's line number. This has been resolved in upstream and Tilo has been notified about this. This should be listed [here](https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10001_2016/students/issues.html)  
 A1: Most tests will output some sort of stacktrace, adding the `-e` flag only prints stacktrace for maven internals, not the actual test   
-A2: For tests that are expecting exceptions(`@Test(expected=SomeException.class)`), the actual stacktrace will be swallowed. To prevent this, manually wrap the code under test in a `try-catch` block with `e.printStackTrace();` where `e` is the exception. It is unfortunate that JUnit defaults to this behavior; this will be rectified for `Panda2-next`.  
-A3: For the love of Alan Turing, use an IDE!!
-
-Q: Test looks wrong  
-A: Please check [Issue Reslution](https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10001_2016/students/issues.html)
-
+A2: For tests that are expecting exceptions(`@Test(expected=SomeException.class)`), the actual stacktrace will be swallowed. To prevent this, manually wrap the code under test in a `try-catch` block with `e.printStackTrace();` where `e` is the exception or setup breakpoints.
 
 ## Language questions
 
@@ -77,7 +89,6 @@ A: That's how Java packages work, live with it
 Q: Can I use lambdas/streams/functional stuff/external library?  
 A: Yes
 
-
 ## General questions
 
 Q: What is `<some class>` and what does it do?  
@@ -97,27 +108,3 @@ A: No
 
 Q: Can I modify the directory structure?  
 A: No
-
-## Maven cheat sheet
-
-Tasks:
-
- - Clean - delete binaries
- - Compile - compiles the entire project
- - Test - run all unit tests (compiles project if not already compiled)
-
-Frequently used commands:
-
- - Clean - `mvnw clean`
- - Compile - `mvnw clean compile`
- - Test - `mvnw clean test`
- - Run single test class -  `mvnw test -Dtest=<class>`
- - Run single test -  `mvnw test -Dtest=<class>#<method>*`
- - Start program - `mvnw clean compile exec:java`
-
-Flags:
-
- - `-q` - quiet output
- - `-e` - show detailed stacktrace for maven internals
- - `-i` - verbose output
- - `-DskipTests` - skip unit tests
