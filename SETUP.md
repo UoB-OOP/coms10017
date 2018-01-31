@@ -83,10 +83,12 @@ Add Java to `PATH` and setup `JAVA_HOME` so that other tools such as
 the console can find where Java is.
 
  1. Open *Control Panel*, in `\System and Security\System` click 
-    on `Advanced system settings` on the left
+    on `Advanced system settings` on the left. On Windows 10, typing
+    `env` in the Start menu search should bring up the correct window
+    without going through Control Panel.
  2. Open `Environment Variables...` on the bottom
- 3. Find `Path` or `PATH` in the User variable list, create one if it
-    does not already exist. Set the value to the `bin` directory of 
+ 3. Find `Path` or `PATH` in the User variable list, creating one if it
+    does not already exist. Add the path to the `bin` directory of 
     your Java install, eg: `C:\Program Files\Java\jdk1.8.0_102\bin`
  4. Add a new variable and name it `JAVA_HOME` in User variable list,
     set the value to the install directory, eg: 
