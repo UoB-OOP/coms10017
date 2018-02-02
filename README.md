@@ -39,39 +39,39 @@ This document will contain all general FAQs. For specific topics, visit:
 
 ## FAQ
 
-Q: How do I know what caused a test to fail? What is a stacktrace?
-A: A stacktrace tells you which method threw an exception and the path (call trace) that leads up to the exception. Most tests will print some sort of stacktrace in Maven's output (NOTE: adding the `-e` flag only prints stacktrace for maven internals, not the actual test). For tests that are expecting exceptions (`@Test(expected=SomeException.class)`), the actual stacktrace will be swallowed. In case you want to prevent this, manually wrap the code under test in a `try-catch` block with `e.printStackTrace();` where `e` is the exception or setup breakpoints.
+**Q**: How do I know what caused a test to fail? What is a stacktrace? <br />
+**A**: A stacktrace tells you which method threw an exception and the path (call trace) that leads up to the exception. Most tests will print some sort of stacktrace in Maven's output (NOTE: adding the `-e` flag only prints stacktrace for maven internals, not the actual test). For tests that are expecting exceptions (`@Test(expected=SomeException.class)`), the actual stacktrace will be swallowed. In case you want to prevent this, manually wrap the code under test in a `try-catch` block with `e.printStackTrace();` where `e` is the exception or setup breakpoints.
 
-Q: Can I have multiple `return`s in a method?
-A: Yes, early returns will "short-circuit" and finish the method execution.
+**Q**: Can I have multiple `return`s in a method? <br />
+**A**: Yes, early returns will "short-circuit" and finish the method execution.
 
-Q: I have nested `while`/`for` loops and I want to break out of them, what should I do?
-A: Refactor the nested loop into a separate method so that you can return early.
+**Q**: I have nested `while`/`for` loops and I want to break out of them, what should I do? <br />
+**A**: Refactor the nested loop into a separate method so that you can return early.
 
-Q: Can I use labels in `while`/`for` loops?
-A: Yes but it is not encourage nor required for any of the coursework.
+**Q**: Can I use labels in `while`/`for` loops? <br />
+**A**: Yes but it is not encourage nor required for any of the coursework.
 
-Q: How does `<test method>` work?
-A: Read the test's method name, and then quickly skim the code (it should read like English). If you are still not sure, consult one of the TAs or ask on the forum.
+**Q**: How does `<test method>` work? <br />
+**A**: Read the test's method name, and then quickly skim the code (it should read like English). If you are still not sure, consult one of the TAs or ask on the forum.
 
-Q: Why can't I find the implementation for `<some interface>`?
-A: Not all interfaces have implementations, read lecture slides.
+**Q**: Why can't I find the implementation for `<some interface>`? <br />
+**A**: Not all interfaces have implementations, read lecture slides.
 
-Q: Why is the source nested so deep? for example:`src\test\java\uk\ac\bris\cs\scotlandyard\...`
-A: That's how Java packages work, live with it.
+**Q**: Why is the source nested so deep? for example:`src\test\java\uk\ac\bris\cs\scotlandyard\...` <br />
+**A**: That's how Java packages work, live with it.
 
-Q: Can I use lambdas/streams/functional things/external library?
-A: Yes.
+**Q**: Can I use lambdas/streams/functional things/external library? <br />
+**A**: Yes.
 
-Q: Why is `<some method>` undocumented?
-A: Not everything requires documentation (**do report this as it could be an oversight**).
+**Q**: Why is `<some method>` undocumented? <br />
+**A**: Not everything requires documentation (**do report this as it could be an oversight**).
 
-Q: Can I modify the tests?
-A: No.
+**Q**: Can I modify the tests? <br />
+**A**: No.
 
-Q: Can I modify any other files in the coursework?
-A: Yes, but it is your responsibility to make sure tests still pass (without modifying them) and the project still compiles.
+**Q**: Can I modify any other files in the coursework? <br />
+**A**: Yes, but it is your responsibility to make sure tests still pass (without modifying them) and the project still compiles.
 
-Q: Do I have to use git?
-A: No, you may use any version control software you see fit.
+**Q**: Do I have to use git? <br />
+**A**: No, you may use any version control software you see fit.
 
