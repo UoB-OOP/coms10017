@@ -1,84 +1,61 @@
-Panda2 quick reference
-===================================
+COMS10009 wiki
+==============
 
-A set of documents have been prepared for teaching:
+This repository will contain FAQs and issue resolutions such as setting up the JDK for development.
 
- * [Setup](SETUP.md) - setup instruction for lab machines
- * [Resources](RESOURCES.md) - resources student can use for their project
+This document will contain all general FAQs, for specific topics, visit: 
+
+ * [Setup](SETUP.md) - setup instruction for JDK on either your own machine or lab computers
  * [Java](JAVA.md) - quick reminder of Java features
- * [Objectives](OBJECTIVES.md) - learning objectives in the CW-MODEL and CW-AI project
+ * [Maven](MAVEN.md) - cheat sheet for maven
+ * [Resources](RESOURCES.md) - a summary of software collaboration services you can use for your project
+ * [TA notes](TA_NOTES.md) - a small set of notes from the TAs that give you some insight on the design of the coursework
 
+## General notes
 
-## Maven cheat sheet
-
-Frequently used commands:
-
- - Clean - `mvnw clean` (deletes compiled classes, safe to do anytime)
- - Compile - `mvnw clean compile`
- - Test - `mvnw clean test`
- - Run single test class -  `mvnw test -Dtest=<class>`
- - Run single test -  `mvnw test -Dtest=<class>#<method>*`
- - Start program - `mvnw clean compile exec:java`
-
-Flags:
-
- - `-q` - quiet output
- - `-e` - show detailed stacktrace for maven internals
- - `-i` - verbose output
- - `-Dwerror=true|false` - fail on warning or not
- - `-DskipTests` - skip unit tests
-
-
-## Important notices
-
- 1. Students are **encouraged** to add `System.out.println()` in their model. Make sure to make it easily spottable, i.e. `">>>>>> roundNum" + round` otherwise it might get lost in maven's long output.  
- 2. Test `Failure` is not the same as `Error`;  If a test fails due to some unexpected exception then it's an Error that has nothing to do with the test. 
- 3. Students will **have to** understand the `sample game sequence` for for them to call the correct spectator methods.
- 4. Students will **have to** read the `model specification` for them to carry out the correct game logic (DoubleMove/reveal rounds, etc)
+ 1. For debugging, use `System.out.println(...)` liberally. Make sure to make it easily spottable, i.e. `">>>>>> roundNum" + round` otherwise it might get lost in maven's long output.  
+ 2. For JUnit, a test `Failure` is not the same as `Error`; if a test fails due to some unexpected exception then it's an Error that has nothing to do with the actual test. 
+ 3. Please read the course descriptions carefully; a lot of the details are buried in the text.
 
 ## Common issues
 
 * During test/runtime:`RuntimeException: Implement me`  
-      Student didn't remove the `throw new RuntimeException("Implement me");` statement
+      You need to remove the `throw new RuntimeException("Implement me");` statement
 * mvnw:`Error: JAVA_HOME is not defined correctly; We cannot execute ….`  
-      The `export JAVA_HOME=…` step is only meant for MVB2.11 Linux lab machines ONLY; students don't usually read  
+      The `export JAVA_HOME=…` step is only meant for MVB2.11 Linux lab machines ONLY; 
       Run: `unset JAVA_HOME` to undo this
 * ./mvnw:`/bin/bash^M: bad interpreter…`  
-      The `mvnw` executable is broken; if on Linux, do `sed -i -e 's/\r$//' mvnw`; OSX users can try `dos2unix`
+      The `mvnw` executable is broken due to line breaks removed by Windows. 
+      On Linux, do `sed -i -e 's/\r$//' mvnw` to fix `mwnv`, macOS users can try `dos2unix`
 * mvnw:`The goal you specified requires a project to execute but there is no POM in this directory`  
-      The `mvnw`  command should be executed from the project root(where `pom.xml` resides)
-* Cannot find symbol `Objects`  
-      If using `import static ...Objects.requireNotNull`, then use the unqualified method name, `requireNotNull`. If using `import ...Objects`, then call `Objects.requireNotNull`
+      The `mvnw`  command should be executed from the project root(where `pom.xml` is located)
 * javac:`cannot find symbol...`  
-      Compilation error, probably syntax related. Or possibly they haven't set the `JAVA_HOME` variable, see the next entry for more details
+      Compilation error, probably syntax related. Or possibly the correct `JAVA_HOME` environment variable is not set, see the next entry for more details
 * javac:`cannot find symbol...javafx.scene....`     
-      JavaFX is not correctly installed on the machine, consult [Setup](SETUP.md); for MVB2.11 lab machines simply: `export JAVA_HOME="/usr/java/jdk1.8.0_111"`, add this to `.bashrc` or type it **everytime** after login 
+      JavaFX is not correctly installed on the machine, consult [Setup](SETUP.md); 
+      For MVB2.11 lab machines simply run `export JAVA_HOME="/usr/java/jdk1.8.0_111"`, add this to `.bashrc` or type it **everytime** after login
+      For QB F.101a laptops, follow instructions in [Setup](SETUP.md)
  * mvnw:`java.lang.UnsupportedClassVersionError:... Unsupported major.minor version 5...`  
       Maven wrapper needs Java 8 to work, check that the correct `JAVA_HOME` is set. If this happens on a Mac, make sure that `JAVA_HOME` is NOT pointing to the system bundled Java 6.  
 
-## Testing related issues
+## FAQ
 
-Q: Where is the stacktrace!?  
+Q: How do I know what caused a test to fail? What is a stacktrace?  
 
-A1: Most tests will output some sort of stacktrace, adding the `-e` flag only prints stacktrace for maven internals, not the actual test   
-A2: For tests that are expecting exceptions(`@Test(expected=SomeException.class)`), the actual stacktrace will be swallowed. To prevent this, manually wrap the code under test in a `try-catch` block with `e.printStackTrace();` where `e` is the exception or setup breakpoints.
+A: A stacktrace tells you which method threw an exception and the path(call trace) that leads up to the exception. Most tests will print some sort of stacktrace in Maven's output(NOTE: adding the `-e` flag only prints stacktrace for maven internals, not the actual test). For tests that are expecting exceptions(`@Test(expected=SomeException.class)`), the actual stacktrace will be swallowed. In case you want to prevent this, manually wrap the code under test in a `try-catch` block with `e.printStackTrace();` where `e` is the exception or setup breakpoints.
 
-## Language questions
 
-Q: Can I have multiple returns in a method?  
+Q: Can I have multiple returns in a method?
 A: Yes, early returns will "short-circuit" and finish the method execution
 
-Q: I have nested while/for loops and I want to break out of them, what should I do?  
-A: Refactor so that you don't have nested loop
+Q: I have nested while/for loops and I want to break out of them, what should I do?
+A: Refactor the nested loop into a separate method so that you can return early.
 
-Q: Can I use labels in while/for loops?  
-A: No (there are legitimate uses but it is not encourage nor required for this coursework)
+Q: Can I use labels in while/for loops?
+A: Yes but it is not encourage nor required for any of the coursework.
 
-Q: How does `<insert test method>` work?  
-A: Read the test's method name, and then quickly skim the code(it should read like English)
-
-Q: Why does `<insert IDE>` not work?  
-A: We don't teach IDEs, if you want to use one you'll have to spend time learning yourself
+Q: How does `<test method>` work?
+A: Read the test's method name, and then quickly skim the code(it should read like English). If you are still not sure, consult one of the TAs or ask on the forum.
 
 Q: Why can't I find the implementation for `<some interface>`?  
 A: Not all interfaces have implementations, read lecture slides
@@ -86,25 +63,18 @@ A: Not all interfaces have implementations, read lecture slides
 Q: Why is the source nested so deep? for example:`src\test\java\uk\ac\bris\cs\scotlandyard\...`  
 A: That's how Java packages work, live with it
 
-Q: Can I use lambdas/streams/functional stuff/external library?  
+Q: Can I use lambdas/streams/functional things/external library?
 A: Yes
-
-## General questions
-
-Q: What is `<some class>` and what does it do?  
-A: Read the JavaDoc
 
 Q: Why is `<some method>` undocumented?  
 A: Not everything requires documentation(**do report this as it could be an oversight**)
 
-Q: Can I delete `<insert random file in project>` file?  
-A: Yes(except for test classes), as long as the tests pass
-
-Q: Can I modify the tests?  
+Q: Can I modify the tests?
 A: No
 
-Q: Do I have to use Git?  
-A: No
+Q: Can I modify any other files in the coursework?
+A: Yes, but it is your responsibility to make sure tests still pass(without modifying them) and the project still compiles.
 
-Q: Can I modify the directory structure?  
-A: No
+Q: Do I have to use Git?
+A: No, you may use any version control software you see fit.
+

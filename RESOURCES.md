@@ -1,13 +1,13 @@
 # Student resources
 
-This document outlines free resources student can use for their software 
+This document outlines free resources you can use for your software 
 projects.
 
-Accurate as of Nov. 21, 2016
+Accurate as of Feb. 2, 2018
 
 ## VCS
 
-Hosted VCS is essential as students frequently receive paired 
+Hosted VCS is essential as you will frequently receive paired 
 assignments. Solutions listed below are specifically tailored for 
 students as all of them provide private repositories free of charge. 
 
@@ -15,9 +15,8 @@ students as all of them provide private repositories free of charge.
 
 #### GitLab
 
-GitLab is a complete hosted Git solution that students can install on 
-their local machine.
-
+GitLab is a complete hosted Git solution that you can install on 
+your local machine.
 
 ### Third party solutions
 
@@ -31,12 +30,13 @@ promoted to student account).
 
 In addition to unlimited private repositories, student will also 
 receive a list of bundled services to use with GitHub
-such as free Travis CI for private repositories. 
-
+such as free Travis CI for private repositories. Note that GitHub 
+organisations are not supported for education/free accounts which 
+might be important for group work.  
 
 NOTE: GitHub only supports Git 
 
-Students may apply [here](https://education.github.com/)
+Apply [here](https://education.github.com/)
 
 #### BitBucket
 
@@ -49,7 +49,7 @@ registration.
 
 NOTE: BitBucket supports both Git and Hg (Mercurial)
 
-Students my apply by filling out the 
+Apply by filling out the 
 [form](https://www.atlassian.com/software/views/bitbucket-academic-license)
 
 
@@ -57,17 +57,16 @@ Students my apply by filling out the
 
 Most IDEs are opensource but a few are paid.
 
-
 ### JetBrains (incl. IntelliJ and related products)
 
 JetBrain offers their entire suite of IDE and programming related
 products for free given that you can prove that you are a student 
 or teaching staff member.
 
-Students can apply [here](https://www.jetbrains.com/student/)
+Apply [here](https://www.jetbrains.com/student/)
 
 ### Visual Studio 
 
 University of Bristol has an active DreamSpark subscription where 
-students can download and activate Visual Studio by logging in with 
-their UoB email address.
+you can download and activate Visual Studio by logging in with your
+ UoB email address.

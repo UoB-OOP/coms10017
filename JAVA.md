@@ -448,6 +448,8 @@ libraries.
  * [Mockito](http://site.mockito.org/)- mocking framework
  * [Apache Commons](https://commons.apache.org/) - suite of reusable tasks
  
+This list is by no means representative as there are many domain specific
+libraries as well.
 
 ### Java 8 Stream 
 

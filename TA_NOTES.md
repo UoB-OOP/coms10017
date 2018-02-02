@@ -1,4 +1,4 @@
-Objectives
+TA notes
 ==========
 
 ## CW-OXO and CW-Model
@@ -75,13 +75,6 @@ inputs will an appropriate exception.
 CW-OXO intentionally left out a few unit tests around the
 `registerSpectator` functionality, those could be uses as
 unit testing practices.
-
-### Functional programming
-
-Both CW-OXO and CW-Model contains two versions of the reference
-model implementation. One is the Java 7 model that uses imperative
-programming, the other model uses functional programming
-features introduced in Java 8.
 
 ### Patterns
 

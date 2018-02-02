@@ -4,12 +4,53 @@ In order to start working on the  cw-model and cw-ai coursework,
 your machine needs to have Java 8u102 or newer installed. 
 
 
+## Windows
+
+**Note for lab laptops in QB F.101a:**
+
+JDK has already been installed on all laptops but for `javac` and `mvnw` to work properly, do the following:
+
+1. In the start menu, type `env`, click `Edit environment variable for the current user`
+2. In the `Edit environment variable` window, click `???` on the top and then add the following two set of values:
+
+ * `PATH` = `C:\Program Files\Java\jdk1.8.0_102\bin`
+ * `JAVA_HOME` = `C:\Program Files\Java\jdk1.8.0_102`
+
+Reopen your terminal(CMD) for changes to take effect.
+
+**For your own Windows machine:**
+
+Download the latest JDK from 
+[Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html),
+choose the appropriate Windows package and follow the installation 
+instructions.
+
+Add Java to `PATH` and setup `JAVA_HOME` so that other tools such as 
+the console can find where Java is.
+
+ 1. Open *Control Panel*, in `\System and Security\System` click 
+    on `Advanced system settings` on the left. On Windows 10/7, typing
+    `env` in the Start menu search should bring up the correct window
+    without going through Control Panel.
+ 2. Open `Environment Variables...` on the bottom
+ 3. Find `Path` or `PATH` in the User variable list, creating one if it
+    does not already exist. Add the path to the `bin` directory of 
+    your Java install, eg: `C:\Program Files\Java\jdk1.8.0_102\bin`
+ 4. Add a new variable and name it `JAVA_HOME` in User variable list,
+    set the value to the install directory, eg: 
+    `C:\Program Files\Java\jdk1.8.0_102`
+ 5. Restart to see changes
+ 
+  
+**NOTE**: x64 systems must install the `Windows x64` package otherwise 
+JavaFX and other development tools might not work properly.
+
+
 ## CentOS 7
 
 **Note for lab machines in 2.11:**
 
-OracleJDK should already be install at `/usr/java/jdk1.8.0_111`, students MUST set the proper JAVA_HOME via
-`export JAVA_HOME="/usr/java/jdk1.8.0_111"`, they may want to add this to their `.bashrc`.
+OracleJDK should already be install at `/usr/java/jdk1.8.0_111`, but you set the proper `JAVA_HOME` via `export JAVA_HOME="/usr/java/jdk1.8.0_111"`, you may want to add this to your `.bashrc`.
 
 **For any other CentOS machines:**
 
@@ -46,7 +87,6 @@ Download the latest JDK from
 [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 , choose the `Mac OS X` package and follow the installation instructions. 
 
-
 ----
 
 You may have to set `JAVA_HOME` and add Java to `PATH` manually.
@@ -69,32 +109,4 @@ C shell:
     setenv PATH $JAVA_HOME/bin:$PATH
     export PATH=$JAVA_HOME/bin:$PATH
 
-Confirm the installation by typing `java -version` and 
-    `echo $JAVA_HOME`
-
-## Windows
-
-Download the latest JDK from 
-[Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html),
-choose the appropriate Windows package and follow the installation 
-instructions.
-
-Add Java to `PATH` and setup `JAVA_HOME` so that other tools such as 
-the console can find where Java is.
-
- 1. Open *Control Panel*, in `\System and Security\System` click 
-    on `Advanced system settings` on the left. On Windows 10, typing
-    `env` in the Start menu search should bring up the correct window
-    without going through Control Panel.
- 2. Open `Environment Variables...` on the bottom
- 3. Find `Path` or `PATH` in the User variable list, creating one if it
-    does not already exist. Add the path to the `bin` directory of 
-    your Java install, eg: `C:\Program Files\Java\jdk1.8.0_102\bin`
- 4. Add a new variable and name it `JAVA_HOME` in User variable list,
-    set the value to the install directory, eg: 
-    `C:\Program Files\Java\jdk1.8.0_102`
- 5. Restart to see changes
- 
-  
-**NOTE**: x64 systems must install the `Windows x64` package otherwise 
-JavaFX and other development tools might not work properly.
+Confirm the installation by typing `java -version` and `echo $JAVA_HOME`
