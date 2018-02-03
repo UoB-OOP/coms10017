@@ -98,6 +98,12 @@ instances of `PlayerConfiguration`
 Players only need to implement an interface to be injected into the 
 model via the constructor. 
 
+#### MVC
+
+The entire user interface is writen in JavaFX where the view is speficied in 
+a declarative language called FXML. When the game starts, controllers will load
+and inject all references from the FXML file. After initialisation 
+the data model is then used to bind attributes together.
 
 ## CW-AI
  
