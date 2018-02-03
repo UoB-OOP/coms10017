@@ -19,22 +19,22 @@ This document will contain all general FAQs. For specific topics, visit:
 
 ## Common issues
 
-* During test/runtime:`RuntimeException: Implement me`
+* During test/runtime:`RuntimeException: Implement me`<br />
       You need to remove the `throw new RuntimeException("Implement me");` statement.
-* `mvnw`:`Error: JAVA_HOME is not defined correctly; We cannot execute ….`
+* `mvnw`:`Error: JAVA_HOME is not defined correctly; We cannot execute ….`<br />
       The `export JAVA_HOME=…` step is only meant for MVB2.11 Linux lab machines **only**. Run `unset JAVA_HOME` to undo this.
-* `./mvnw`:`/bin/bash^M: bad interpreter…`
+* `./mvnw`:`/bin/bash^M: bad interpreter…`<br />
       The `mvnw` script is broken due to Windows line endings.
       On Linux, do `sed -i -e 's/\r$//' mvnw` to fix `mwnv`. macOS users can try `dos2unix`.
-* `mvnw`:`The goal you specified requires a project to execute but there is no POM in this directory`
+* `mvnw`:`The goal you specified requires a project to execute but there is no POM in this directory`<br />
       The `mvnw` command should be executed from the project root (where `pom.xml` is located).
-* `javac`:`cannot find symbol...`
+* `javac`:`cannot find symbol...`<br />
       Compilation error, probably syntax related. Or possibly the correct `JAVA_HOME` environment variable is not set, see the next entry for more details.
-* `javac`:`cannot find symbol...javafx.scene....`
-      JavaFX is not correctly installed on the machine, consult [Setup](SETUP.md).
+* `javac`:`cannot find symbol...javafx.scene....`<br />
+      JavaFX is not correctly installed on the machine, consult [Setup](SETUP.md).<br />
       For MVB2.11 lab machines simply run `export JAVA_HOME="/usr/java/jdk1.8.0_111"`, and either add this to `.bashrc` or type it **every time** after you log in.
       For QB F.101a laptops, follow instructions in [Setup](SETUP.md).
- * `mvnw`:`java.lang.UnsupportedClassVersionError:... Unsupported major.minor version 5...`
+ * `mvnw`:`java.lang.UnsupportedClassVersionError:... Unsupported major.minor version 5...`<br />
       Maven wrapper needs Java 8 to work, check that the correct `JAVA_HOME` is set. If this happens on a Mac, make sure that `JAVA_HOME` is **not** pointing to the system-bundled Java 6.
 
 ## FAQ
