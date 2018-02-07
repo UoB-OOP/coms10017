@@ -21,6 +21,15 @@ This document will contain all general FAQs. For specific topics, visit:
 
 * During test/runtime:`RuntimeException: Implement me`<br />
       You need to remove the `throw new RuntimeException("Implement me");` statement.
+* On Windows, `'javac' is not recognized as an internal or external command,
+operable program or batch file.` <br />
+      The `PATH` environment variable is not set up to contain your java installation. Follow the instrucitons in [Setup on Windows](SETUP.md#windows).
+* `javac`:`cannot find symbol...`<br />
+      Compilation error, probably syntax related. Or possibly the correct `JAVA_HOME` environment variable is not set, see the next entry for more details.
+* `javac`:`cannot find symbol...javafx.scene....`<br />
+      JavaFX is not correctly installed on the machine, consult [Setup](SETUP.md).<br />
+      For MVB2.11 lab machines simply run `export JAVA_HOME="/usr/java/jdk1.8.0_111"`, and either add this to `.bashrc` or type it **every time** after you log in.
+      For QB F.101a laptops, follow instructions in [Setup](SETUP.md).
 * `mvnw`:`Error: JAVA_HOME is not defined correctly; We cannot execute ….`<br />
       The `export JAVA_HOME=…` step is only meant for MVB2.11 Linux lab machines **only**. Run `unset JAVA_HOME` to undo this.
 * `./mvnw`:`/bin/bash^M: bad interpreter…`<br />
@@ -28,12 +37,6 @@ This document will contain all general FAQs. For specific topics, visit:
       On Linux, do `sed -i -e 's/\r$//' mvnw` to fix `mwnv`. macOS users can try `dos2unix`.
 * `mvnw`:`The goal you specified requires a project to execute but there is no POM in this directory`<br />
       The `mvnw` command should be executed from the project root (where `pom.xml` is located).
-* `javac`:`cannot find symbol...`<br />
-      Compilation error, probably syntax related. Or possibly the correct `JAVA_HOME` environment variable is not set, see the next entry for more details.
-* `javac`:`cannot find symbol...javafx.scene....`<br />
-      JavaFX is not correctly installed on the machine, consult [Setup](SETUP.md).<br />
-      For MVB2.11 lab machines simply run `export JAVA_HOME="/usr/java/jdk1.8.0_111"`, and either add this to `.bashrc` or type it **every time** after you log in.
-      For QB F.101a laptops, follow instructions in [Setup](SETUP.md).
  * `mvnw`:`java.lang.UnsupportedClassVersionError:... Unsupported major.minor version 5...`<br />
       Maven wrapper needs Java 8 to work, check that the correct `JAVA_HOME` is set. If this happens on a Mac, make sure that `JAVA_HOME` is **not** pointing to the system-bundled Java 6.
 
@@ -74,4 +77,16 @@ This document will contain all general FAQs. For specific topics, visit:
 
 **Q**: Do I have to use git? <br />
 **A**: No, you may use any version control software you see fit.
+
+**Q**: How do I initialise/commit/push/pull/merge/revert/... using git? <br />
+**A**: The [Atlassian git tutorials](https://www.atlassian.com/git/tutorials) explain most common operations. A quick Google search, e.g. `git how to <operation>`, should also return plenty of useful resources.
+
+**Q**: I am gettin an error that I haven't seen before. What do I do? <br />
+**A**: Read the error message _carefully_. It will most likely tell you what's happening and give a hint about where the error originated. Start by investigating there and seeing if you can spot any issues.
+
+**Q**: I am seeing an error message that I don't understand. What should I do? <br />
+**A**: Use your favourite search engine to search of the error message as it comes up. Using `"double quotes"` around your search term will make sure the search engine treats it as one single term rather than splitting it up into words. If you get many results, try narrowing things down by adding some keywords related to your problem, e.g. mac/ubuntu/windows, git/java/vim, or eclipse/intellij/atom.
+
+**Q**: I have not found any help online and I don't think anyone has encoutnered this problem before. What else can I do? <br />
+**A**: Try a few variations on your search engine query, such as rephrasing your issue or pasting a different part of the error message. If you still cannot find any help, post on the forum, giving a detailed description of the problem and showing the steps to reproduce your issue.
 
