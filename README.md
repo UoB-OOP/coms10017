@@ -1,9 +1,9 @@
-COMS10009 wiki
+COMS10009 Wiki
 ==============
 
-This repository contains FAQs and issue resolutions, such as setting up the JDK for development.
+This repository contains [FAQs](#faq), [common issue resolutions](#common-issues), and detailed discussions on various topics, such as [setting up the JDK for development](SETUP.md) and [third-party resources](#RESOURCES.md). Short URL: <https://tiny.cc/coms10009-wiki>.
 
-This document will contain all general FAQs. For specific topics, visit:
+This document contains all general FAQs. For specific topics, visit:
 
  * [Setup](SETUP.md) -- setup instruction for JDK on either your own machine or lab computers
  * [Java](JAVA.md) -- quick reminder of Java features
