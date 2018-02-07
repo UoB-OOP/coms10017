@@ -81,11 +81,11 @@ operable program or batch file.` <br />
 **Q**: How do I initialise/commit/push/pull/merge/revert/... using git? <br />
 **A**: The [Atlassian git tutorials](https://www.atlassian.com/git/tutorials) explain most common operations. A quick Google search, e.g. `git how to <operation>`, should also return plenty of useful resources.
 
-**Q**: I am gettin an error that I haven't seen before. What do I do? <br />
+**Q**: I am getting an error that I haven't seen before. What do I do? <br />
 **A**: Read the error message _carefully_. It will most likely tell you what's happening and give a hint about where the error originated. Start by investigating there and seeing if you can spot any issues.
 
 **Q**: I am seeing an error message that I don't understand. What should I do? <br />
-**A**: Use your favourite search engine to search of the error message as it comes up. Using `"double quotes"` around your search term will make sure the search engine treats it as one single term rather than splitting it up into words. If you get many results, try narrowing things down by adding some keywords related to your problem, e.g. mac/ubuntu/windows, git/java/vim, or eclipse/intellij/atom.
+**A**: Use [your](https://www.google.co.uk) [favourite](https://duckduckgo.com/) [search](https://www.bing.com/) [engine](https://uk.search.yahoo.com/) to search for the error message as it comes up. Using `"double quotes"` around your search term will make sure the search engine treats it as one single term rather than splitting it up into words. If you get many results, try narrowing things down by adding some keywords related to your problem, e.g. mac/ubuntu/windows, git/java/vim, or eclipse/intellij/atom.
 
 **Q**: I have not found any help online and I don't think anyone has encoutnered this problem before. What else can I do? <br />
 **A**: Try a few variations on your search engine query, such as rephrasing your issue or pasting a different part of the error message. If you still cannot find any help, post on the forum, giving a detailed description of the problem and showing the steps to reproduce your issue.
