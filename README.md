@@ -13,9 +13,10 @@ This document contains all general FAQs. For specific topics, visit:
 
 ## General notes
 
- 1. For debugging, use `System.out.println(...)` liberally. Make sure to make it easily spottable, e.g. `">>>>>> roundNum" + round`, otherwise it might get lost in maven's long output.
- 2. For JUnit, a test `Failure` is not the same as `Error`. If a test fails due to some unexpected exception, then it's an error that has nothing to do with the actual test.
- 3. _Please_ read the course descriptions _carefully_. Most of the details you need _are there_, you just need to take the time to find them and understand them.
+ 1. We **only support Java 8**. If you use Java 9, you may encounter unexpected issues and _we cannot help you with them_. If you've previously installed Java 9, we recommend that you _uninstall Java 9 and install **only** Java 8_. Read [Uninstalling Java](SETUP.MD#uninstalling-other-java-versions) if you need need a hint on where to start.
+ 2. For debugging, use `System.out.println(...)` liberally. Make sure to make it easily spottable, e.g. `">>>>>> roundNum" + round`, otherwise it might get lost in maven's long output.
+ 3. For JUnit, a test `Failure` is not the same as `Error`. If a test fails due to some unexpected exception, then it's an error that has nothing to do with the actual test.
+ 4. _Please_ read the course descriptions _carefully_. Most of the details you need _are there_, you just need to take the time to find them and understand them.
 
 ## Common issues
 
@@ -39,6 +40,10 @@ operable program or batch file.` <br />
       The `mvnw` command should be executed from the project root (where `pom.xml` is located).
  * `mvnw`:`java.lang.UnsupportedClassVersionError:... Unsupported major.minor version 5...`<br />
       Maven wrapper needs Java 8 to work, check that the correct `JAVA_HOME` is set. If this happens on a Mac, make sure that `JAVA_HOME` is **not** pointing to the system-bundled Java 6.
+ * `mvnw`: Compilation is failing because of warning messages being treated as errors. <br />
+      Ideally, you should deal with the warnings so that they don't come up any more. Read [the Maven page](MAVEN.md) for more info.
+ * `mvnw`: `[WARNING] bootstrap class path not set in conjunction with -source 1.8` <br />
+      You are using the wrong version of Java -- you need to use Java 8! Read [the Setup page](SETUP.md) for insturctions on how to uninstall the wrong versions and install the correct one.
 
 ## FAQ
 
