@@ -5,9 +5,13 @@ Disclamer : we do not endorse any particular IDE for any of the courseworks in t
 
 First, download the project and extract in a suitable location, select the **project directory** like the following
 
-If you see the welcome screen     |  If you do not see the welcome screen
-:--------------------------------:|:-------------------------:
-![](intellij_tutorial/2-ann.png)  |  ![](intellij_tutorial/1-1-ann.png)
+If you see the welcome screen, select `Open`:  
+
+![](intellij_tutorial/2-ann.png)
+
+If you do not see the welcome screen, go to `File` -> `Open` in the menu:
+
+![](intellij_tutorial/1-1-ann.png)
 
 You may need to click the little button on the bottom left as marked with the red arrow:
 ![](intellij_tutorial/3-ann.png)
@@ -17,12 +21,17 @@ You may need to click the little button on the bottom left as marked with the re
 This is analogous to `mvn clean test`
 
 Locate the tests in the left hand side project view:
+
 ![](intellij_tutorial/4-ann.png)
+
 Select the test to run and click on the green button next to the line number, then select first option(i.e `Run ...`)
+
 ![](intellij_tutorial/5-ann.png)
-IntelliJ will take a few seconds to compile files and run the test specified, the output will
-look like the following:
+
+IntelliJ will take a few seconds to compile files and run the test specified, the output will look like the following:
+
 ![](intellij_tutorial/6-ann.png)
+
 You can right click on individual tests to run them again.
 
 ## Running `main`
@@ -30,5 +39,7 @@ You can right click on individual tests to run them again.
 This is analogous to `mvn clean compile exec:java`
 
 Select the main class, and click the green button next to the line number like shown:
+
 ![](intellij_tutorial/7-ann.png)
+
 The application will start, in this case it opened the window on the right.
