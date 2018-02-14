@@ -32,18 +32,19 @@ the console can find where Java is.
     on `Advanced system settings` on the left. On Windows 10/7, typing
     `env` in the Start menu search should bring up the correct window
     without going through Control Panel.
- 2. Open `Environment Variables...` on the bottom
+ 2. Open `Environment Variables...` on the bottom.
  3. Find `Path` or `PATH` in the User variable list, creating one if it
     does not already exist. Add the path to the `bin` directory of 
-    your Java install, eg: `C:\Program Files\Java\jdk1.8.0_102\bin`
+    your Java install, eg: `C:\Program Files\Java\jdk1.8.0_102\bin`.
  4. Add a new variable and name it `JAVA_HOME` in User variable list,
     set the value to the install directory, eg: 
     `C:\Program Files\Java\jdk1.8.0_102`
- 5. Restart to see changes
+ 5. Open a new terminal (or restart existing ones) to see the changes.
  
   
-**NOTE**: x64 systems must install the `Windows x64` package otherwise 
-JavaFX and other development tools might not work properly.
+**NOTE**: On 64-bit systems, you must install the **Windows x64** Java
+package, otherwise JavaFX and other development tools might not work
+properly.
 
 
 ## CentOS 7
