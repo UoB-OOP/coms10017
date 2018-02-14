@@ -20,3 +20,5 @@ Flags:
  - `-Dwerror=true|false` - fail on warning or not
  - `-DskipTests` - skip unit tests
 
+**Note**: The maven build script we provide is set up to treat warnings as errors by default. This is to make you aware of potential issues in your code, and ideally you should address the cause of the warnings before proceeding. If you are absolutely sure you know what you are doing, you can override this behaviour using the `-Dwerror` flag.
+
