@@ -1,7 +1,7 @@
 COMS10009 Wiki
 ==============
 
-This repository contains [FAQs](#faq), [common issue resolutions](#common-issues), and detailed discussions on various topics, such as [setting up the JDK for development](SETUP.md) and [third-party resources](#RESOURCES.md). Short URL: <https://tiny.cc/coms10009-wiki>.
+This repository contains [FAQs](#faq), [common issue resolutions](#common-issues), and detailed discussions on various topics, such as [setting up the JDK for development](SETUP.md) and [third-party resources](RESOURCES.md). Short URL: <https://tiny.cc/coms10009-wiki>.
 
 This document contains all general FAQs. For specific topics, visit:
  * [IntelliJ](INTELLIJ.md) -- basic import guide for intellij
@@ -49,8 +49,9 @@ operable program or batch file.` <br />
 
 ## FAQ
 
+
 **Q**: How do I know what caused a test to fail? What is a stacktrace? <br />
-**A**: A stacktrace tells you which method threw an exception and the path (call trace) that leads up to the exception. Most tests will print some sort of stacktrace in Maven's output (NOTE: adding the `-e` flag only prints stacktrace for maven internals, not the actual test). For tests that are expecting exceptions (`@Test(expected=SomeException.class)`), the actual stacktrace will be swallowed. In case you want to prevent this, manually wrap the code under test in a `try-catch` block with `e.printStackTrace();` where `e` is the exception or setup breakpoints.
+**A**: A stacktrace tells you which method threw an exception and the path (call trace) that leads up to the exception. Most tests will print some sort of stacktrace in Maven's output (NOTE: adding the `-e` flag only prints stacktrace for maven internals, not the actual test). If you are still unsure, [this](https://www.reddit.com/r/javahelp/wiki/learn_to_help_yourself) tutorial may be helpful.
 
 **Q**: Can I have multiple `return`s in a method? <br />
 **A**: Yes, early returns will "short-circuit" and finish the method execution.
