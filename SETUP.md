@@ -89,7 +89,7 @@ Ubuntu's package repositories contain an up-to-date OpenJDK with latest
 JavaFX jar as a separate package.
 
  1. Update apt by typing `sudo apt-get update`
- 2. Install OpenJDK and OpenJFX by typing `sudo apt-get install openjdk-8-jdk libopenjfx-java`
+ 2. Install OpenJDK and OpenJFX by typing `sudo apt-get install openjdk-8-jdk openjfx libopenjfx-java`
 
 Other Linux distribution should have similar packages, which you can obtain
 through the corresponding package manager.
