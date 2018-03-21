@@ -33,6 +33,9 @@ Java
 
 <!-- tocstop -->
 
+Note that this guide is accurate for Java 8 and 9 only. Java 10 introduced local variable type 
+inference so some of the non-denotable types are now available for use. 
+
 ## Terminology 
 
 ### Classpath

@@ -1,7 +1,7 @@
 IntelliJ setup guide
 ====================
 
-Disclamer : we do not endorse any particular IDE for any of the courseworks in the COMS10009 module.
+Disclamer : we do not endorse any particular IDE for any of the coursework in the COMS10009 module.
 
 First, download the project and extract in a suitable location, select the **project directory** like the following
 

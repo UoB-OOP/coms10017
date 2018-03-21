@@ -100,7 +100,7 @@ model via the constructor.
 
 #### MVC
 
-The entire user interface is writen in JavaFX where the view is speficied in 
+The entire user interface is written in JavaFX where the view is speficied in 
 a declarative language called FXML. When the game starts, controllers will load
 and inject all references from the FXML file. After initialisation 
 the data model is then used to bind attributes together.

@@ -15,7 +15,7 @@ This document contains all general FAQs. For specific topics, visit:
 
 ## General notes
 
- 1. We **only support Java 8**. If you use Java 9, you may encounter unexpected issues and _we cannot help you with them_. If you've previously installed Java 9, we recommend that you _uninstall Java 9 and install **only** Java 8_. Read [Uninstalling Java](SETUP.md#uninstalling-other-java-versions) if you need need a hint on where to start.
+ 1. We **only support Java 8**. If you use Java 9/10, you may encounter unexpected issues and _we cannot help you with them_. If you've previously installed Java 9/10, we recommend that you _uninstall Java 9/10 and install **only** Java 8_. Read [Uninstalling Java](SETUP.md#uninstalling-other-java-versions) if you need need a hint on where to start.
  2. For debugging, use `System.out.println(...)` liberally. Make sure to make it easily spottable, e.g. `">>>>>> roundNum" + round`, otherwise it might get lost in maven's long output.
  3. For JUnit, a test `Failure` is not the same as `Error`. If a test fails due to some unexpected exception, then it's an error that has nothing to do with the actual test.
  4. _Please_ read the course descriptions _carefully_. Most of the details you need _are there_, you just need to take the time to find them and understand them.

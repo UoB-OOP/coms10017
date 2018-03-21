@@ -2,10 +2,10 @@
 
 In order to start working on the cw-model and cw-ai coursework,
 your machine needs to have Java 8, Update 102 or newer installed. **Do not install Java
-9** -- we do not support it, and _you_ are responsible for solving any issues
+9/10** -- we do not support it, and _you_ are responsible for solving any issues
 you might encounter due to the Java version mismatch.
 
-If you have already installed Java 9, we recommned you remove it completely and
+If you have already installed Java 9/10, we recommend you remove it completely and
 install Java 8 instead. Refer to [the Uninstall section](#uninstalling-other-java-versions)
 for some hints on how to do this.
 
@@ -100,7 +100,7 @@ through the corresponding package manager.
 Download the latest JDK 8 from
 [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html),
 choose the `Mac OS X` package and follow the installation instructions.
-**Note**: You might be presented with Java 9 as being the lastest version, in
+**Note**: You might be presented with Java 9 as being the latest version, in
 which case you will need to manually choose the latest Java 8 package.
 
 Alternatively, if you use [Homebrew](https://brew.sh/)<sup>†</sup>:
@@ -116,7 +116,7 @@ for more information.
 out on what of the best package managers out there. Brew is very easy to
 install, use, and even remove if you need to, and it will simplify most (if not
 all) package management that you will ever need to do on Mac. Refer to the
-homepage for insutrctions or [the detalied docs
+homepage for instructions or [the detailed docs
 page](https://docs.brew.sh/Installation.html). Brew is so good that it has beed
 [ported to Linux](http://linuxbrew.sh/) too!
 
