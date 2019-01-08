@@ -4,37 +4,37 @@ Java
 
 <!-- toc -->
 
-- [Terminology](#terminology)
-- [Language features](#language-features)
-  * [Inheritance](#inheritance)
-  * [Generics](#generics)
-    + [Type inference](#type-inference)
-    + [Type erasure](#type-erasure)
-    + [Wildcards](#wildcards)
-    + [Intersection types](#intersection-types)
-  * [Covariance and Contravariance](#covariance-and-contravariance)
-  * [Exceptions](#exceptions)
-    + [Unchecked exception](#unchecked-exception)
-    + [Checked exception](#checked-exception)
-  * [Varargs](#varargs)
-  * [Initialisers](#initialisers)
-    + [Instance initialisers](#instance-initialisers)
-    + [Static initialisers](#static-initialisers)
-  * [Anonymous class](#anonymous-class)
-  * [Annotations](#annotations)
-  * [Static imports](#static-imports)
-  * [Java 8](#java-8)
-    + [Lambda expressions](#lambda-expressions)
-    + [Method reference](#method-reference)
-    + [Default methods](#default-methods)
-- [Libraries and API](#libraries-and-api)
-  * [Java 8 Stream](#java-8-stream)
-  * [Java 8 Optional](#java-8-optional)
+- [Java](#java)
+  - [Terminology](#terminology)
+    - [Classpath](#classpath)
+  - [Language features](#language-features)
+    - [Inheritance](#inheritance)
+    - [Generics](#generics)
+      - [Type inference](#type-inference)
+      - [Type erasure](#type-erasure)
+      - [Wildcards](#wildcards)
+      - [Intersection types](#intersection-types)
+    - [Covariance and Contravariance](#covariance-and-contravariance)
+    - [Exceptions](#exceptions)
+      - [Unchecked exception](#unchecked-exception)
+      - [Checked exception](#checked-exception)
+    - [Varargs](#varargs)
+    - [Initialisers](#initialisers)
+      - [Instance initialisers](#instance-initialisers)
+      - [Static initialisers](#static-initialisers)
+    - [Anonymous class](#anonymous-class)
+    - [Annotations](#annotations)
+    - [Static imports](#static-imports)
+    - [Java 8+](#java-8)
+      - [Lambda expressions](#lambda-expressions)
+      - [Method reference](#method-reference)
+      - [Default methods](#default-methods)
+  - [Libraries and API](#libraries-and-api)
+    - [Java 8+ Stream](#java-8-stream)
+    - [Java 8+ Optional](#java-8-optional)
 
 <!-- tocstop -->
 
-Note that this guide is accurate for Java 8 and 9 only. Java 10 introduced local variable type 
-inference so some of the non-denotable types are now available for use. 
 
 ## Terminology 
 
@@ -382,7 +382,7 @@ Can be rewritten as:
 ```
 Note that this only works when method names do not clash.
 
-### Java 8 
+### Java 8+
 
 Java 8 introduced syntax support for functional programming
 as well as backwards compatible interface evolution.
@@ -454,9 +454,9 @@ libraries.
 This list is by no means representative as there are many domain specific
 libraries as well.
 
-### Java 8 Stream 
+### Java 8+ Stream 
 
-Java 8 introduced Streams for lazy processing. Previously tedious 
+Java 8+ introduced Streams for lazy processing. Previously tedious 
 task such as filtering collection elements are now easy and safe.
 
 For example:
@@ -476,9 +476,9 @@ For example:
 
 ```
 
-### Java 8 Optional
+### Java 8+ Optional
 
-Java 8 provided a simple utility class called `Optional` to safely navigate
+Java 8+ provided a simple utility class called `Optional` to safely navigate
 around null values. For example:
 
 ```java

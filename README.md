@@ -15,7 +15,7 @@ This document contains all general FAQs. For specific topics, visit:
 
 ## General notes
 
- 1. We **only support Java 8**. If you use Java 9/10, you may encounter unexpected issues and _we cannot help you with them_. If you've previously installed Java 9/10, we recommend that you _uninstall Java 9/10 and install **only** Java 8_. Read [Uninstalling Java](SETUP.md#uninstalling-other-java-versions) if you need need a hint on where to start.
+ 1. We **only support Java 11**. If you use Java 8/9/10, you may encounter unexpected issues and _we cannot help you with them_. If you've previously installed Java 8/9/10, we recommend that you _uninstall Java 8/9/10 and install **only** Java 11_. Read [Uninstalling Java](SETUP.md#uninstalling-other-java-versions) if you need need a hint on where to start.
  2. For debugging, use `System.out.println(...)` liberally. Make sure to make it easily spottable, e.g. `">>>>>> roundNum" + round`, otherwise it might get lost in maven's long output.
  3. For JUnit, a test `Failure` is not the same as `Error`. If a test fails due to some unexpected exception, then it's an error that has nothing to do with the actual test.
  4. _Please_ read the course descriptions _carefully_. Most of the details you need _are there_, you just need to take the time to find them and understand them.
@@ -26,7 +26,7 @@ This document contains all general FAQs. For specific topics, visit:
       You need to remove the `throw new RuntimeException("Implement me");` statement.
 * On Windows, `'javac' is not recognized as an internal or external command,
 operable program or batch file.` <br />
-      The `PATH` environment variable is not set up to contain your java installation. Follow the instrucitons in [Setup on Windows](SETUP.md#windows).
+      The `PATH` environment variable is not set up to contain your java installation. Follow the instructions in [Setup on Windows](SETUP.md#windows).
 * `javac`:`cannot find symbol...`<br />
       Compilation error, probably syntax related. Or possibly the correct `JAVA_HOME` environment variable is not set, see the next entry for more details.
 * `javac`:`cannot find symbol...javafx.scene....`<br />
@@ -45,7 +45,7 @@ operable program or batch file.` <br />
  * `mvnw`: Compilation is failing because of warning messages being treated as errors. <br />
       Ideally, you should deal with the warnings so that they don't come up any more. Read [the Maven page](MAVEN.md) for more info.
  * `mvnw`: `[WARNING] bootstrap class path not set in conjunction with -source 1.8` <br />
-      You are using the wrong version of Java -- you need to use Java 8! Read [the Setup page](SETUP.md) for insturctions on how to uninstall the wrong versions and install the correct one.
+      You are using the wrong version of Java -- you need to use Java 8! Read [the Setup page](SETUP.md) for instructions on how to uninstall the wrong versions and install the correct one.
 
 ## FAQ
 
@@ -95,6 +95,12 @@ operable program or batch file.` <br />
 **Q**: I am seeing an error message that I don't understand. What should I do? <br />
 **A**: Use [your](https://www.google.co.uk) [favourite](https://duckduckgo.com/) [search](https://www.bing.com/) [engine](https://uk.search.yahoo.com/) to search for the error message as it comes up. Using `"double quotes"` around your search term will make sure the search engine treats it as one single term rather than splitting it up into words. If you get many results, try narrowing things down by adding some keywords related to your problem, e.g. mac/ubuntu/windows, git/java/vim, or eclipse/intellij/atom.
 
-**Q**: I have not found any help online and I don't think anyone has encoutnered this problem before. What else can I do? <br />
+**Q**: I have not found any help online and I don't think anyone has encountered this problem before. What else can I do? <br />
 **A**: Try a few variations on your search engine query, such as rephrasing your issue or pasting a different part of the error message. If you still cannot find any help, post on the forum, giving a detailed description of the problem and showing the steps to reproduce your issue.
+
+**Q**: Can I use functional programming concepts (i.e `map`, `flatMap`, etc) in the coursework? <br />
+**A**:So the course is called Object Oriented Programming so naturally we want students to learn about OOP and not functional programming. That said, functional programming in Java 8 and above mostly simplifies imperative bits of your program and doesn't reduce OOP as the task has a clear interface that you have to implement. 
+Think of it this way: 
+
+By specification, you have to call the `makeMove` method of the current player with a view of the model. Successfully implementing this requires you to understand that the model is an instance that implements the view interface and that your model interacts with multiple instances of the player type by calling methods(sending messages). If you can explain that clearly then you have achieved the learning outcome. Tasks such as finding the current player or signalling multiple spectator of some events could be done either declaratively through FP or imperatively by iterating through a collection of players/spectators. Because in Java everything is an object(excluding primitives), whatever you pick here, you are technically doing OOP so if you understand how the FP code you wrote works in terms of OOP, I don't see why you shouldn't use it. If you do use FP, be prepared to justify why it is better than the other approaches in your case; the ability to do so will also land you some credits.
 

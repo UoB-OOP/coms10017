@@ -3,7 +3,7 @@
 This document outlines free resources you can use for your software
 projects.
 
-Accurate as of Feb. 2, 2018
+Accurate as of Jan. 8, 2019
 
 ## Version Control Systems (VCS)
 
@@ -26,9 +26,11 @@ or [install it on your own server](https://about.gitlab.com/installation/).
 
 NOTE: GitLab supports both git and hg (Mercurial).
 
-#### GitHub Education
+#### GitHub
 
-GitHub is now offering unlimited private repositories for student or
+A free tier GitHub account supports free unlimited private repositories for 3 collaborators. 
+
+If you want additional features, GitHub is also offering an education account for student or
 university teaching staff. University email is required for verification
 and the process could take up to 2 weeks. (In practice, after clicking
 the link in the confirmation email, your account will be automatically
@@ -36,13 +38,11 @@ promoted to student account).
 
 In addition to unlimited private repositories, students will also
 receive a list of bundled services to use with GitHub
-such as free Travis CI for private repositories. Note that GitHub
-organisations are not supported for education/free accounts which
-might be important for group work.
+such as free Travis CI for private repositories. 
 
 NOTE: GitHub only supports git.
 
-Apply [here](https://education.github.com/).
+Apply [here](https://education.github.com/) for the student account.
 
 #### BitBucket
 

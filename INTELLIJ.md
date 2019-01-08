@@ -1,8 +1,6 @@
 IntelliJ setup guide
 ====================
 
-Disclamer : we do not endorse any particular IDE for any of the coursework in the COMS10009 module.
-
 First, download the project and extract in a suitable location, select the **project directory** like the following
 
 If you see the welcome screen, select `Open`:  

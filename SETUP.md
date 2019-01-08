@@ -1,16 +1,16 @@
 # Development environment setup
 
 In order to start working on the cw-model and cw-ai coursework,
-your machine needs to have Java 8, Update 102 or newer installed. **Do not install Java
-9/10** -- we do not support it, and _you_ are responsible for solving any issues
+your machine needs to have Java 11 installed. **Do not install Java
+8/9/10** -- we do not support it, and _you_ are responsible for solving any issues
 you might encounter due to the Java version mismatch.
 
-If you have already installed Java 9/10, we recommend you remove it completely and
-install Java 8 instead. Refer to [the Uninstall section](#uninstalling-other-java-versions)
+If you have already installed Java 8/9/10, we recommend you remove it completely and
+install Java 11 instead. Refer to [the Uninstall section](#uninstalling-other-java-versions)
 for some hints on how to do this.
 
 
-## Installing Java 8
+## Installing Java 11
 
 ### Windows
 
@@ -29,8 +29,7 @@ Reopen your terminal(CMD) for changes to take effect.
 **For your own Windows machine:**
 
 Download the latest JDK from
-[Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html),
-choose the appropriate Windows package and follow the installation
+[AdoptOpenJDK](https://adoptopenjdk.net/installation.html?variant=openjdk11&jvmVariant=hotspot#x64_win-jdk), and follow the installation
 instructions.
 
 Add Java to `PATH` and setup `JAVA_HOME` so that other tools such as
@@ -47,7 +46,7 @@ the console can find where Java is.
  4. Add a new variable and name it `JAVA_HOME` in User variable list,
     set the value to the install directory, eg:
     `C:\Program Files\Java\jdk1.8.0_102`
- 5. Open a new terminal (or restart existing ones) to see the changes.
+ 5. Open a **new** terminal to see the changes.
 
 
 **NOTE**: On 64-bit systems, you must install the **Windows x64** Java
@@ -59,7 +58,7 @@ properly.
 
 **Note for lab machines in 2.11:**
 
-OracleJDK should already be install at `/usr/java/jdk1.8.0_111`, but you set the
+OracleJDK should already be install at `/usr/java/jdk1.8.0_111`, but you have to set the
 proper `JAVA_HOME` via `export JAVA_HOME="/usr/java/jdk1.8.0_111"`. You may want
 to add this to your `.bashrc`.
 
