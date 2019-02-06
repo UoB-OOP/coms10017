@@ -14,45 +14,11 @@ for some hints on how to do this.
 
 ### Windows
 
-**Note for lab laptops in QB F.101a:**
-
-JDK has already been installed on all laptops but for `javac` and `mvnw` to work properly, do the following:
-
-1. In the start menu, type `env`, click `Edit environment variable for the current user`
-2. In the `Edit environment variable` window, click `???` on the top and then add the following two set of values:
-
- * `PATH` = `C:\Program Files\Java\jdk1.8.0_102\bin`
- * `JAVA_HOME` = `C:\Program Files\Java\jdk1.8.0_102`
-
-Reopen your terminal(CMD) for changes to take effect.
 
 **For your own Windows machine:**
 
 Download the latest JDK from
-[AdoptOpenJDK](https://adoptopenjdk.net/installation.html?variant=openjdk11&jvmVariant=hotspot#x64_win-jdk), and follow the installation
-instructions.
-
-Add Java to `PATH` and setup `JAVA_HOME` so that other tools such as
-the console can find where Java is.
-
- 1. Open *Control Panel*, in `\System and Security\System` click
-    on `Advanced system settings` on the left. On Windows 10/7, typing
-    `env` in the Start menu search should bring up the correct window
-    without going through Control Panel.
- 2. Open `Environment Variables...` on the bottom.
- 3. Find `Path` or `PATH` in the User variable list, creating one if it
-    does not already exist. Add the path to the `bin` directory of
-    your Java install, eg: `C:\Program Files\Java\jdk1.8.0_102\bin`.
- 4. Add a new variable and name it `JAVA_HOME` in User variable list,
-    set the value to the install directory, eg:
-    `C:\Program Files\Java\jdk1.8.0_102`
- 5. Open a **new** terminal to see the changes.
-
-
-**NOTE**: On 64-bit systems, you must install the **Windows x64** Java
-package, otherwise JavaFX and other development tools might not work
-properly.
-
+[AdoptOpenJDK](https://adoptopenjdk.net/installation.html?variant=openjdk11&jvmVariant=hotspot#x64_win-jdk), and follow the installation instructions.
 
 ### CentOS 7
 
