@@ -29,11 +29,16 @@ Keep in mind that setting the PATH does not persist across different terminal se
 
 ### Linux
 
+**IMPORTANT**
+
+Ubuntu 18.04 LTS has a broken Java 11 package that are actually Java 10. do not install those!. Follow the guide [here](https://www.linuxuprising.com/2018/10/how-to-install-oracle-java-11-in-ubuntu.html) to install the Oracle Java 11 package.   
+<del>
 Ubuntu's package repositories contain an up-to-date OpenJDK with latest
 JavaFX jar as a separate package.
+</del>
 
- 1. Update apt by typing `sudo apt update`
- 2. Install OpenJDK by typing `sudo apt install openjdk-11-jdk`
+ 1. <del>Update apt by typing `sudo apt update`</dev>
+ 2. <del>Install OpenJDK by typing `sudo apt install openjdk-11-jdk`</del>
 
 Other Linux distribution should have similar packages, which you can obtain
 through the corresponding package manager.
