@@ -29,7 +29,8 @@ Then append the two export commands to your `~/.bashrc` (or whatever shell you h
 
     code ~/.bashrc
 
-And the append the two export lines at the very end of the file and save. Close and reopen all terminal windows for the change to take effect.
+Paste the two export commands at the very end of the file and then save. 
+Close and reopen all terminal windows for the change to take effect.
 
 
 
