@@ -4,12 +4,12 @@ COMS10009 Wiki
 This repository contains [FAQs](#faq), [common issue resolutions](#common-issues), and detailed discussions on various topics, such as [setting up the JDK for development](SETUP.md) and [third-party resources](RESOURCES.md). Short URL: <https://tiny.cc/coms10009-wiki>.
 
 This document contains all general FAQs. For specific topics, visit:
- * [IntelliJ](INTELLIJ.md) -- basic import guide for intellij
  * [Setup](SETUP.md) -- setup instruction for JDK on either your own machine or lab computers
+ * [IntelliJ](INTELLIJ.md) -- basic import guide for coursework projects using IntelliJ
+
  * [Java](JAVA.md) -- quick reminder of Java features
  * [Maven](MAVEN.md) -- cheat sheet for maven
  * [Resources](RESOURCES.md) -- a summary of software collaboration services you can use for your project
- * [TA notes](TA_NOTES.md) -- a small set of notes from the TAs that give you some insight on the design of the coursework
 
 **Important**: If you are using IntelliJ, please read the [IntelliJ](INTELLIJ.md) instructions **carefully**. If you imported the project and some of code is highlighted red or simply not working then it may be easier to download a fresh copy the skeleton project and follow the instructions.
 

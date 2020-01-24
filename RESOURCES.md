@@ -3,7 +3,7 @@
 This document outlines free resources you can use for your software
 projects.
 
-Accurate as of Jan. 8, 2019
+Accurate as of Jan. 24, 2020
 
 ## Version Control Systems (VCS)
 
@@ -53,7 +53,7 @@ BitBucket also offers free academic accounts that supports team of
 unlimited members. University email verification is required upon
 registration.
 
-NOTE: BitBucket supports both git and hg (Mercurial).
+NOTE: BitBucket supports git only.
 
 Apply by filling out the
 [form](https://www.atlassian.com/software/views/bitbucket-academic-license).
@@ -81,19 +81,20 @@ Note than you don't need to use BitBucket in particular for these tutorials.
 
 Most IDEs are opensource but a few are paid.
 
-### JetBrains (incl. IntelliJ and related products)
+### JetBrains (incl. IntelliJ IDEA and related products)
 
 JetBrain offers their entire suite of IDE and programming related
 products for free given that you can prove that you are a student
 or teaching staff member.
 
-Apply [here](https://www.jetbrains.com/student/)
+Apply [here](https://www.jetbrains.com/student/).
+
+IntelliJ IDEA will be the only supported IDE in the labs.
 
 ### Visual Studio
 
 University of Bristol has an active DreamSpark subscription where
-you can download and activate Visual Studio by logging in with your
- UoB email address.
+you can download and activate Visual Studio by logging in with your UoB email address.
 
 ### Text editor + plugin
 
@@ -107,4 +108,6 @@ A few popular choices are (in no particular order):
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Atom](https://atom.io/)
 * [Vim](https://github.com/vim/vim)
+
+All of these are installed on the MVB 2.11 lab machines.
 

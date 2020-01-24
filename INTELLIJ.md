@@ -1,9 +1,9 @@
-IntelliJ setup guide
+IntelliJ project import setup guide
 ====================
 
 First, download the project and extract in a suitable location, select the **project directory** like the following
 
-If you see the welcome screen, select `Open`:  
+If you see the welcome screen, select `Open` (**Do not choose `Import Project`**):  
 
 ![](intellij_tutorial/2-ann.png)
 

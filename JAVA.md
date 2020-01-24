@@ -46,7 +46,7 @@ libraries.
 
 ## Language features
 
-Below are a some of the language features used in cw-model and cw-ai.
+Below are a some of the language features used in the worksheets and coursework.
 
 ### Inheritance
 

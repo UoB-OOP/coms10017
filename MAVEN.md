@@ -15,7 +15,7 @@ Frequently used commands:
 Flags:
 
  - `-q` - quiet output
- - `-e` - show detailed stacktrace for maven internals
+ - `-e` - show detailed stacktrace for **maven internals**, this is not what you are looking for if you want stacktraces from your program.
  - `-i` - verbose output
  - `-Dwerror=true|false` - fail on warning or not
  - `-DskipTests` - skip unit tests
