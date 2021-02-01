@@ -1,9 +1,16 @@
 IntelliJ project import setup guide
-====================
+====================================
 
-First, download the project and extract in a suitable location, select the **project directory** like the following
 
-If you see the welcome screen, select `Open` (**Do not choose `Import Project`**):  
+**Important**: If you are using IntelliJ, please read the [IntelliJ](guides/INTELLIJ.md)
+instructions **carefully**. If you imported the project and some of code is highlighted red or
+simply not working then it may be easier to download a fresh copy the skeleton project and follow
+the instructions.
+
+First, download the project and extract in a suitable location, select the **project directory**
+like the following
+
+If you see the welcome screen, select `Open` (**Do not choose `Import Project`**):
 
 ![](intellij_tutorial/2-ann.png)
 
@@ -22,11 +29,13 @@ Locate the tests in the left hand side project view:
 
 ![](intellij_tutorial/4-ann.png)
 
-Select the test to run and click on the green button next to the line number, then select first option(i.e `Run ...`)
+Select the test to run and click on the green button next to the line number, then select first
+option(i.e `Run ...`)
 
 ![](intellij_tutorial/5-ann.png)
 
-IntelliJ will take a few seconds to compile files and run the test specified, the output will look like the following:
+IntelliJ will take a few seconds to compile files and run the test specified, the output will look
+like the following:
 
 ![](intellij_tutorial/6-ann.png)
 
