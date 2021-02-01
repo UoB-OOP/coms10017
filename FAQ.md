@@ -1,4 +1,4 @@
-# FAQ, general notes, and common issues
+# Common issues & FAQ
 
 ## General notes
 
