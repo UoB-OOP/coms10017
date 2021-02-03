@@ -187,7 +187,7 @@ Once `brew` installed, proceed to install Java 11:
 ```shell
 > brew update # this may take anywhere from 10 to 30 minutes
 > brew tap AdoptOpenJDK/openjdk
-> brew cask install adoptopenjdk11
+> brew install --cask adoptopenjdk11
 ```
 
 If you happen to be on macOS Catalina or newer, you may have to enable permissions for the Terminal.
