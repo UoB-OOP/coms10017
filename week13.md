@@ -174,6 +174,7 @@ via `git remote rm origin`). Once this is set up it is time to upload (or *push*
 project files to the online repository for the first time:
 
 ```shell
+> git branch -m main # needed because older git versions still defaults to `master`
 > git push -u origin main
 ```
 
