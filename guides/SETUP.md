@@ -215,7 +215,7 @@ To uninstall Java 8/9/10/12/13 (or other unsupported versions):
 * On Windows, use the Control Panel.
 * On Linux, use your package manager, e.g. `sudo apt remove openjdk-9-jdk`.
 * On Mac, depending on how you installed Java:
-    - Using Homebrew: `brew cask uninstall java`
+    - Using Homebrew: `brew uninstall --cask java`
     - Manually using a package downloaded from the Oracle website (note the version number in the
       first command, which you may need to change according to what you installed):
 
