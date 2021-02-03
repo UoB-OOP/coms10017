@@ -111,6 +111,12 @@ and initialise this directory as a Git repository or 'repo' via:
 > git init
 ```
 
+Then make sure that you're using the 'main' branch.
+
+```shell
+> git checkout -b main
+```
+
 **We will be uploading the content of the directory where you run `git init` to GitHub later; do not
 just run that command anywhere, only do it inside your project directory.**
 
