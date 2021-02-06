@@ -7,10 +7,17 @@ and [third-party resources](guides/RESOURCES.md).
 
 Practical materials for each week's lab can be found below:
 
-* [Week 13](week13.md)
-* Week 14 (TBA)
-* Week 15 (TBA)
-* Week 16 (TBA)
+* [Week 13](week13.md) - *01 Feb*
+* [Week 14](week14.md) - *08 Feb*
+    * Worksheet 1 solutions (TBA)
+* [Week 15](week15.md) - *19 Feb*
+    * Worksheet 2 solutions (TBA)
+* Week 16 - *22 Feb*
+    * Worksheet 3 solutions (TBA)
+* Week 17 - *01 Mar*
+    * Reading week
+* Week 18 - *08 Mar*
+    * Worksheet 4 solutions (TBA)
 
 For specific topics, visit:
 
