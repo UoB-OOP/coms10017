@@ -118,7 +118,7 @@ are applied in the tests. To do this we add `src/*.java` to the list of source f
 # For Linux/macOS only:
 javac -cp src:test:lib/junit-4.7.jar test/TestRunner.java src/*.java -Xlint:all
 # For Windows only:
-javac -cp src;test;lib/junit-4.7.jar test/TestRunner.java src/*.java -Xlint:all
+javac -cp "src;test;lib/junit-4.7.jar" test/TestRunner.java src/*.java -Xlint:all
 ```
 
 To run `TestRunner` we must again specify our classpath. Notice that when compiling we specify the
@@ -131,7 +131,7 @@ source files (including their relative location), but when running we just speci
 # For Linux/macOS only:
 java -cp src:test:lib/junit-4.7.jar TestRunner
 # For Windows only:
-java -cp src;test;lib/junit-4.7.jar TestRunner
+java -cp "src;test;lib/junit-4.7.jar" TestRunner
 ```
 
 ---

@@ -9,7 +9,7 @@ Practical materials for each week's lab can be found below:
 
 * [Week 13](week13.md) - *01 Feb*
 * [Week 14](week14.md) - *08 Feb*
-    * Worksheet 1 solutions (TBA)
+    * [Worksheet 1 solutions](https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10017_2020_TB-2/content/oo/pdfs/sheet1_solutions.pdf)
 * [Week 15](week15.md) - *19 Feb*
     * Worksheet 2 solutions (TBA)
 * Week 16 - *22 Feb*
