@@ -5,7 +5,9 @@ This repository contains [Common issues & FAQ](FAQ.md) notes, and detailed discu
 topics, such as [setting up the JDK for development](guides/SETUP.md)
 and [third-party resources](guides/RESOURCES.md).
 
-Practical materials for each week's lab can be found below:
+---
+
+Practical materials (0%) for each week's lab can be found below:
 
 * [Week 13](week13.md) - *01 Feb*
 * [Week 14](week14.md) - *08 Feb*
@@ -13,11 +15,21 @@ Practical materials for each week's lab can be found below:
 * [Week 15](week15.md) - *19 Feb*
     * [Worksheet 2 solutions](https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10017_2020_TB-2/content/oo/pdfs/sheet2_solutions.pdf)
 * [Week 16](week16.md) - *22 Feb*
-    * Worksheet 3 solutions (TBA)
+    * [Worksheet 3 solutions](https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10017_2020_TB-2/content/oo/pdfs/sheet3_solutions.pdf)
 * Week 17 - *01 Mar*
     * Reading week
-* Week 18 - *08 Mar*
-    * Worksheet 4 solutions (TBA)
+* [Week 18](week18.md) - *08 Mar*
+    * [Worksheet 4 solutions](https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10017_2020_TB-2/content/oo/pdfs/sheet4_solutions.pdf)
+
+
+**Summative assignment (100%)**:
+
+*It is hightly recommended you at least complete worksheet 3, Q2 before starting.*
+
+ * ScotlandYard model (TBA)
+ * ScotlandYard AI (TBA)
+
+---
 
 For specific topics, visit:
 
