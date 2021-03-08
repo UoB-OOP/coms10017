@@ -7,7 +7,7 @@ and [third-party resources](guides/RESOURCES.md).
 
 ---
 
-Practical materials (0%) for each week's lab can be found below:
+**Practical materials (0%)**:
 
 * [Week 13](week13.md) - *01 Feb*
 * [Week 14](week14.md) - *08 Feb*
@@ -21,13 +21,12 @@ Practical materials (0%) for each week's lab can be found below:
 * [Week 18](week18.md) - *08 Mar*
     * [Worksheet 4 solutions](https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10017_2020_TB-2/content/oo/pdfs/sheet4_solutions.pdf)
 
-
 **Summative assignment (100%)**:
 
-*It is hightly recommended you at least complete worksheet 3, Q2 before starting.*
+*It is highly recommended you at least complete worksheet 3, Q2 before starting.*
 
- * ScotlandYard model (TBA)
- * ScotlandYard AI (TBA)
+* Week 18 ~
+    * [The ScotlandYard project](summative/README.md)
 
 ---
 
