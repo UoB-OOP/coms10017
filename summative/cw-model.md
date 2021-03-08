@@ -1,8 +1,8 @@
 CW-MODEL
 ========
 
-In this first task we will ask you to implement Java classes, which model the game mechanics of "
-Scotland Yard" within a given software framework.
+In this first task we will ask you to implement Java classes, which model the game mechanics of
+"Scotland Yard" within a given software framework.
 
 Note that you will implement the full version of the game (not the beginners version), but with the
 following alterations/clarifications:
@@ -92,7 +92,7 @@ package. You are not allowed to modify any of the interfaces or tests.
 
 ### Testing
 
-There are 82 tests provided for your development. They are located in `src/test/java` and organised
+There are 82+ tests provided for your development. They are located in `src/test/java` and organised
 in the same directory pattern. You should try to run the tests on the provided skeleton project.
 
 **TODO:** Test the empty model and observe test failures:

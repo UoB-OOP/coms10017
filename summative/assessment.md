@@ -41,8 +41,8 @@ You should submit before the deadline:
    BlackBoard before the deadline in form of one single zip file called `sy.zip`. Your sub-projects
    `cw-model` and `cw-ai` must be in two different top level subfolders called `cw-model`
    and `cw-ai`
-   within the zip file. **Do not include the report in the zip archive, it must submitted separately
-   on BlackBoard**
+   within the zip file. **Do not include the report in the zip archive, it must be submitted
+   separately on BlackBoard**
 
 Concretely, submit the following:
 
@@ -63,8 +63,6 @@ Submission 2:
         ├── pom.xml
         ├── src
         └──  (any other file required for the project to compile can be in this directory)
-   
-
 ```
 
 **Failure to adhere to these requirements will result in loss of marks; we can't mark reports that
