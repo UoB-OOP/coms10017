@@ -530,7 +530,7 @@ about the new state and event similar to the code below:
 ```java
 ...
 @Override public void chooseMove(@Nonnull Move move){
-  // TODO Advance the mode with move, then notify all observers of what what just happened. 
+  // TODO Advance the model with move, then notify all observers of what what just happened. 
   //  you may want to use getWinner() to determine whether to send out Event.MOVE_MADE or Event.GAME_OVER    
 }
 ```
