@@ -34,8 +34,9 @@ late.
 
 See the task description page for each part to get started:
 
-1. [cw-model](cw-model.md) - part 1 of the coursework
-2. [cw-ai](cw-ai.md) - part 2 of the coursework
+1. [cw-model](cw-model.md) - part 1 of the coursework, [JavaDocs](https://uob-oop.github.io/coms10017/summative/apidocs/) 
+2. [cw-ai](cw-ai.md) - part 2 of the coursework, JavaDocs TBA
+
 
 You may also want to read these:
 
