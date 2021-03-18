@@ -19,7 +19,7 @@ manually.
 **TODO:** As in previous courseworks, create a private repository shared within your team with the
 code from this zip file in it:
 
-* cw-ai (TBA)
+* [cw-ai](https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10017_2020_TB-2/content/oo/code/cw-ai.zip)
 
 If you use Git, a `.gitignore` file is already present with all the correct files to ignore.
 
