@@ -40,29 +40,28 @@ You should submit before the deadline:
 2. A compiling, building and running version of Scotland Yard including all source code to
    BlackBoard before the deadline in form of one single zip file called `sy.zip`. Your sub-projects
    `cw-model` and `cw-ai` must be in two different top level subfolders called `cw-model`
-   and `cw-ai`
-   within the zip file. **Do not include the report in the zip archive, it must be submitted
-   separately on BlackBoard**
+   and `cw-ai` within the zip file. Also include your `report.pdf` at the top level, next to `cw-model` and `cw-ai`.
 
 Concretely, submit the following:
 
+**Update: only submit 1 (one) file, `sy.zip` to BB, when you extract it, it should have the following structure:**
+
 ```
-Submission 1: 
- - report.pdf
-Submission 2:
+Submission 1:
  - sy.zip
-   ├── cw-model # root of the cw-model project, where running `mvnw clean test` will show all tests passing
+   ├── report.pdf  # your PDF report
+   ├── cw-model/   # root of the cw-model project, where running `mvnw clean test` will show all tests passing
    │    ├── mvnw
    │    ├── mvnw.cmd
    │    ├── pom.xml
-   │    ├── src
-   │    └──  (any other file required for the project to compile can be in this directory)
-   └── cw-ai  # root of the cw-ai project, where running `mvnw clean compile exec:java` will run the project
+   │    ├── src/
+   │    └──  ...   # (any other file required for the project to compile can be in this directory)
+   └── cw-ai/      # root of the cw-ai project, where running `mvnw clean compile exec:java` will run the project
         ├── mvnw
         ├── mvnw.cmd
         ├── pom.xml
-        ├── src
-        └──  (any other file required for the project to compile can be in this directory)
+        ├── src/
+        └──  ...   # (any other file required for the project to compile can be in this directory)
 ```
 
 **Failure to adhere to these requirements will result in loss of marks; we can't mark reports that
