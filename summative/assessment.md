@@ -34,8 +34,7 @@ Submission
 You should submit before the deadline:
 
 1. A brief **PDF** report (we expect this to be at least 1 page as a summary of what has been done,
-   and 2 pages maximum reflecting on achievements. A strict maximum of 3 pages applies where, for
-   first class marks, the report should include some brief critical reflection on the merits and
+   and 2 pages maximum reflecting on achievements. A strict maximum of 3 pages applies where the report should include some brief critical reflection on the merits and
    limitations of your work). **The file must be named report.pdf**
 2. A compiling, building and running version of Scotland Yard including all source code to
    BlackBoard before the deadline in form of one single zip file called `sy.zip`. Your sub-projects
